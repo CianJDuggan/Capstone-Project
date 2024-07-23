@@ -1,0 +1,41 @@
+\documentclass[a4paper, fleqn]{article}
+\usepackage{amsmath,amssymb,amsthm} % maths packages
+\usepackage{a4wide} % wide page
+\usepackage{tikz-cd} % commutative diagrams
+\usepackage[colorlinks]{hyperref} % hyperreferences
+\usepackage[margin=0.5in]{geometry} % page layout
+\usepackage{graphicx} % graphics
+\usepackage{multicol} % multiple columns
+\setlength{\mathindent}{0pt}
+
+% Set up Diagram Paths
+\graphicspath{{/home/puca/University/Senior Sophister/Capstone/Graphs}}
+
+\input{commands.tex} % file with useful abbreviations
+
+% Define some abbreviations that we can use later
+\def\lh{\lambda h}  % Shorthand for lambda h
+
+
+% Define the custom \term command for highlighting terms
+\newcommand{\term}[1]{\textcolor{blue}{\textit{#1}}} % blue italics
+\newcommand{\Lim}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{#1}\;$}}}
+% Set the indent for new paragraphs to 0
+\setlength{\parindent}{0pt}
+
+
+\begin{document}
+
+\input{Section 0: Title.tex}
+\newpage
+\input{Section 1: Introduction.tex}
+\newpage
+\input{Section 2: Definitions and Concepts.tex}
+\newpage
+\input{Section 3: Stability Analysis.tex}
+\newpage
+\input{Section 4: Complex Time-Steps.tex}
+\newpage
+\input{Bibliography.tex} % bibliography
+
+\end{document}

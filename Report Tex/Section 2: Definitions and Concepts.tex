@@ -1,0 +1,41 @@
+\section{Definitions and Concepts}
+
+\subsection{Time Steps}
+Let's take a step back to when we first studied derivatives.\\
+\term{Newton's Difference Quotient} should be familiar: 
+$f'(x) = \Lim{h \to 0} \frac{f(x+h) - f(x)}{h}$
+
+\par Viewing Newton's Difference Quotient in the context of numerical methods, we call $h$ a \term{time step}.\\
+Due to computational constraints, we cannot take $h$ to be infinitesimal. (A computer's memory is as small as it is big)\\
+Instead, we take $h$ to be a small, finite number.\\
+This defines the concept of a \term{step size}.\\
+
+\par In a more general sense, differential equations may be represented as $y'(t) = \phi(t, y(t))$.\\
+In this case, $t$ is an independent variable and $y(t)$ is a dependent variable.\\
+The function $\phi(t, y(t))$ is the derivative of $y(t)$ with respect to $t$, and is a function of both $t$ and $y(t)$.\\
+In the context of numerical methods, we approximate $y'(t)$ by $\frac{y(t+\Delta_t) - y(t)}{\Delta_t}$.\\
+Here, $\Delta_t$ is the time step.\\
+This gives $y(t + \Delta_t) \approx y(t) + \Delta_t y'(t)$; a first-order approximation of $y$ a small time step $\Delta_t$ in the future.\\
+TODO: WHAT IS THE ERROR EXACTLY?
+
+\subsection{Complex-Variable Method}
+Take a function $f: \bR \longrightarrow \bR,\; x \longmapsto f(x)$.\\
+Let $f$ be \term{holomorphic} on its domain: $f$ is complex differentiable in a neighbourhood of any $x \in \bR$.\\
+$\forall x$, $f$ is complex differentiable on $B_{\beta}(x) = \{z \in \bC \,|\, |z|-|x| < \beta_{_{\text{small}}}\}$ for some $\beta_{_{\text{small}}} > 0$.\\
+In this case, we get the following fact:\\
+\[f'(x) = \frac{Im\big(f(x+ih)\big)}{h} + O(h^2), \quad \text{where}\; h \in \bR \;\text{and}\; h \neq 0\]\\
+TODO: WHAT IS THE ERROR EXACTLY?
+
+\par Combining this with the first order approximation above, we get $y(t + \Delta_t) \approx y(t) + Im\big(y(t+i\Delta_t)\big)$.
+
+TODO: Flesh this out more!
+
+\subsection{Stability}
+In numerical analysis, a method is said to be \term{stable} if small deviations in the input do not lead to large perturbtions in the output.
+In the context of differential equations, a method is said to be stable if the solution does not grow to be unbounded as the number of time steps increases.
+
+When solving differential equations numerically, the choice of time step is crucial.
+If the step size is too large, the solution may become unstable; the numerical solution will diverge from the analytic solution in proportion with the number of steps.
+If the step size is too small, the solution may be accurate and stable, but the computation may be too slow.
+
+This tradeoff between accuracy and stability is a common theme in numerical analysis, and depends entirely on the choice of numerical method.
