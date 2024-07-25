@@ -34,16 +34,16 @@ This has the exact solution $y(t) = e^{\lambda t}$.\\
 
 \subsubsection{Additional Details}
 \begin{multicols}{2}
-The Taylor series for the exact solution is $y(t) = \sum\limits_{n=0}^{\infty} \frac{{(t)}^n}{n!}$\\
+The Taylor series for the exact solution is 
+\[y(t) = \sum\limits_{n=0}^{\infty} \frac{{(t)}^n}{n!}\]
+
 The solution decays to zero as $t \rightarrow \infty$ when $Re(\lambda) < 0$.\\
 
+\par Normally, when using the exponential decay problem in a numerical analysis context, we would allow $\lambda \in \bC$ with $Re(\lambda)<0$.\\
+However, for the purposes of this paper, we will restrict $\lambda$ to $\bR$ as we will be looking at $h \in \bC$ and we don't want to overcomplicate things.\\
 Unless otherwise mentioned, we will assume that $\lambda \in \bR$ and $\lambda < 0$ for the rest of this paper.\\
-Towards the end of the paper, we will consider the cases where $\lambda \in \mathbb{C}$.\\
 
-$\phi(t, y) = y'(t) = \lambda y(t)$ is linear in $y(t)$\\
-
-normally, when using the exponential decay problem in a numerical analysis context, we would allow $\lambda \in \bC$. However, for the purposes of this paper, we will restrict $\lambda$ to $\bR$ as we will be looking at $h \in \bC$ and we don't want to overcomplicate things.\\
-
+\par $\phi(t, y) = y'(t) = \lambda y(t)$ is linear in $y(t)$\\
 
 \columnbreak{}
 \hspace*{0.75cm}
@@ -52,10 +52,10 @@ A lot of the findings in this paper will be represented\\
 graphically.\\
 \hspace*{0.75cm}
 Let's start with the most basic.\\
-\hspace*{0.75cm}
+\par \hspace*{0.75cm}
 Here's a graph of the exact solution for the\\ 
 \hspace*{0.75cm}
-Exponential Decay Problem with $\lambda = -1$:
+exponential decay problem with $\lambda = -1$:
 \begin{center}
 \includegraphics[width=0.4\textwidth]{Exponential Decay/Exact with -1.png}
 \end{center}

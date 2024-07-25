@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1721921877.69175 "report.tex" "report.pdf" "report" 1721921880.09022 0
+["pdflatex"] 1721923198.91876 "report.tex" "report.pdf" "report" 1721923201.23027 0
   "/home/puca/University/Senior Sophister/Capstone/Graphs/Exponential Decay/Exact with -1.png" 1721921876.62915 21311 1bc9ee362c5a9636c8fa342e86b869d5 ""
   "/home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png" 1721916705.32074 25668 e2f4bc9d6982a89d71494c957a942219 ""
   "/home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png" 1721916693.92093 25676 6c9bcbddf165e7a241c83906e23f98ee ""
@@ -192,13 +192,13 @@
   "Section 0: Title.tex" 1721907923.56311 231 996f9a1f54b46c11efea07b1ccbddf27 ""
   "Section 1: Introduction.tex" 1721915395.33363 1387 5be719c78df854493403d4d8494e09f2 ""
   "Section 2: Definitions and Concepts.tex" 1721915498.07067 2767 3e38042cf32343afa9a2aacd16cec2f1 ""
-  "Section 3: Stability Analysis.tex" 1721921524.6214 9802 d4c7700e00495705480db846157ffa16 ""
+  "Section 3: Stability Analysis.tex" 1721923198.75226 9749 1dd26411cba13d49cc36bdf394994a18 ""
   "Section 4: Complex Time-Steps.tex" 1721921240.23039 7848 7243f5900c5c744979cddc4295fad591 ""
   "commands.tex" 1721915340.66855 1135 a72b53c5506308b5a7e915e56c1c3956 ""
-  "report.aux" 1721921879.87296 3614 5548a32f08a776eaec3c6d342facb2b4 "pdflatex"
-  "report.out" 1721921879.87431 4948 01d0f62f9d3ddb20057be8f69c77e936 "pdflatex"
+  "report.aux" 1721923201.04314 3614 5548a32f08a776eaec3c6d342facb2b4 "pdflatex"
+  "report.out" 1721923201.04452 4948 01d0f62f9d3ddb20057be8f69c77e936 "pdflatex"
   "report.tex" 1721917256.0498 1157 93d13414f64d3f3521d78af053e41cf4 ""
-  "report.toc" 1721921879.87518 2295 92a47d86171ac9e9aae6be28c21ead64 "pdflatex"
+  "report.toc" 1721923201.04511 2295 92a47d86171ac9e9aae6be28c21ead64 "pdflatex"
   (generated)
   "report.aux"
   "report.log"
