@@ -1,5 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib as mpl
+
+cmap = mpl.colormaps['magma_r']
+colors = cmap(np.linspace(0, 1, 10))
 
 def plot_exponential_function(grid, h, lam):
     x = grid/2
@@ -9,7 +13,7 @@ def plot_exponential_function(grid, h, lam):
 
     plt.figure(figsize=(grid, x), facecolor='white', edgecolor='black')
     ax = plt.gca()
-    ax.plot(t, y, color='black')
+    ax.plot(t, y, color=colors[3])
     ax.set_ylabel('$y$', color='black', fontsize=15)
 #    ax.set_title(r'$ \lambda = {}$'.format(lam), color='black')
     ax.set_facecolor('white')
@@ -31,7 +35,7 @@ def plot_exponential_function(grid, h, lam):
     ax.set_xlabel('$t$', color='black', fontsize=15)
     plt.legend(labels=['$e^{\;\lambda t}$', r'$\lambda = {}$'.format(lam)], labelcolor=['black', 'black'], facecolor='white', edgecolor='black', fontsize=15, loc='upper right', handletextpad=0, handlelength=0)
 
-    plt.savefig(f'/home/puca/University/Senior Sophister/Capstone/Graphs/Exponential Decay/Exact with {lam}.png')
+    plt.savefig(f'/home/puca/University/Senior Sophister/Capstone/Graphs/Exponential Decay/Exact with {lam}.png', bbox_inches='tight', pad_inches=0)
     plt.show()
 
 

@@ -1,28 +1,25 @@
 \documentclass[a4paper, fleqn]{article}
-\usepackage{amsmath,amssymb,amsthm} % maths packages
-\usepackage{a4wide} % wide page
-\usepackage{tikz-cd} % commutative diagrams
-\usepackage[colorlinks]{hyperref} % hyperreferences
 \usepackage[margin=0.5in]{geometry} % page layout
+\usepackage{amsmath,amssymb,amsthm} % maths packages
+\usepackage{tikz-cd} % commutative diagrams
+\usepackage[colorlinks, linkcolor=black, urlcolor=black, citecolor=black]{hyperref} % hyperreferences with black links
 \usepackage{graphicx} % graphics
 \usepackage{multicol} % multiple columns
-\setlength{\mathindent}{0pt}
+\usepackage[none]{hyphenat}  % Prevent hyphenation
+\usepackage{microtype} % Improves spacing
+
+\setlength{\parindent}{0pt} % Set the indent for new paragraphs to 0
+\setlength{\mathindent}{0pt} % Set the indent for equations to 0
+
+\tolerance=1000
+\emergencystretch=\maxdimen
+\hyphenpenalty=1000
+\hbadness=10000
 
 % Set up Diagram Paths
 \graphicspath{{/home/puca/University/Senior Sophister/Capstone/Graphs}}
 
 \input{commands.tex} % file with useful abbreviations
-
-% Define some abbreviations that we can use later
-\def\lh{\lambda h}  % Shorthand for lambda h
-
-
-% Define the custom \term command for highlighting terms
-\newcommand{\term}[1]{\textcolor{blue}{\textit{#1}}} % blue italics
-\newcommand{\Lim}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{#1}\;$}}}
-% Set the indent for new paragraphs to 0
-\setlength{\parindent}{0pt}
-
 
 \begin{document}
 

@@ -65,11 +65,11 @@ def plot_Region(stability_function, grid, points):
     plt.xlabel('$Real$', fontsize=15, color='black')
     plt.ylabel('$Imaginary$', fontsize=15, color='black')
 
-    plt.savefig(f'/home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/{name}.png')
+    plt.savefig(f'/home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/{name}.png', bbox_inches='tight', pad_inches=0)
     plt.show()
 
 # Iterate through each function in Functions
-# for s in stability_functions:
-#     plot_Region(s, 10, 2**12)
+for s in stability_functions:
+     plot_Region(s, 10, 2**13)
 
-plot_Region(RK4, 10, 2**13)
+#plot_Region(RK4, 10, 2**13)

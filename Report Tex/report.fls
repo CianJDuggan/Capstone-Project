@@ -11,6 +11,14 @@ INPUT /usr/share/texmf-dist/tex/latex/base/fleqn.clo
 INPUT /usr/share/texmf-dist/tex/latex/base/size10.clo
 INPUT /usr/share/texmf-dist/tex/latex/base/size10.clo
 INPUT /usr/share/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT /usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT /usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT /usr/share/texmf-dist/tex/generic/iftex/iftex.sty
 INPUT /usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 INPUT /usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 INPUT /usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
@@ -27,10 +35,6 @@ INPUT /usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT /usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT /usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT /usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT /usr/share/texmf-dist/tex/latex/a4wide/a4wide.sty
-INPUT /usr/share/texmf-dist/tex/latex/a4wide/a4wide.sty
-INPUT /usr/share/texmf-dist/tex/latex/ntgclass/a4.sty
-INPUT /usr/share/texmf-dist/tex/latex/ntgclass/a4.sty
 INPUT /usr/share/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
 INPUT /usr/share/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
 INPUT /usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
@@ -50,8 +54,6 @@ INPUT /usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
 INPUT /usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
 INPUT /usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
-INPUT /usr/share/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT /usr/share/texmf-dist/tex/latex/graphics/keyval.sty
 INPUT /usr/share/texmf-dist/tex/latex/graphics/graphics.sty
 INPUT /usr/share/texmf-dist/tex/latex/graphics/graphics.sty
 INPUT /usr/share/texmf-dist/tex/latex/graphics/trig.sty
@@ -162,8 +164,6 @@ INPUT /usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code
 INPUT /usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
 INPUT /usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
-INPUT /usr/share/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT /usr/share/texmf-dist/tex/generic/iftex/iftex.sty
 INPUT /usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 INPUT /usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 INPUT /usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
@@ -217,12 +217,18 @@ INPUT /usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 INPUT /usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 INPUT /usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 INPUT /usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
-INPUT /usr/share/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT /usr/share/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT /usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
-INPUT /usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/multicol.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/multicol.sty
+INPUT /usr/share/texmf-dist/tex/latex/hyphenat/hyphenat.sty
+INPUT /usr/share/texmf-dist/tex/latex/hyphenat/hyphenat.sty
+INPUT /usr/share/texmf-dist/tex/latex/microtype/microtype.sty
+INPUT /usr/share/texmf-dist/tex/latex/microtype/microtype.sty
+INPUT /usr/share/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+INPUT /usr/share/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+INPUT /usr/share/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+INPUT /usr/share/texmf-dist/tex/latex/microtype/microtype.cfg
+INPUT /usr/share/texmf-dist/tex/latex/microtype/microtype.cfg
+INPUT /usr/share/texmf-dist/tex/latex/microtype/microtype.cfg
 INPUT ./commands.tex
 INPUT ./commands.tex
 INPUT commands.tex
@@ -253,6 +259,9 @@ OUTPUT report.pdf
 INPUT ./report.out
 INPUT ./report.out
 OUTPUT report.out
+INPUT /usr/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+INPUT /usr/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+INPUT /usr/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT ./Section 0: Title.tex
 INPUT ./Section 0: Title.tex
 INPUT Section 0: Title.tex
@@ -276,12 +285,18 @@ INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT /usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT /usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT /usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT /usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
@@ -347,6 +362,7 @@ INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/G
 INPUT ./Bibliography.tex
 INPUT ./Bibliography.tex
 INPUT Bibliography.tex
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT report.aux
 INPUT ./report.out
 INPUT ./report.out
@@ -363,6 +379,7 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb

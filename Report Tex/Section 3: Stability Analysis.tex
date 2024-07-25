@@ -16,7 +16,7 @@ A common example across numerical analysis is the ODE exponential decay problem:
 Where the constant $\lambda \in \bC$ can be interpreted as the decay rate of the solution.\\
 This has the exact solution $y(t) = e^{\lambda t}$.\\
 
-
+\subsubsection{Proponents of the Exponential Decay Problem}
 \par There are a few pros to this choice of problem:
 \begin{itemize}
     \item The exact solution is known and easily computed; it can be used to evaluate a numerical solution.
@@ -42,12 +42,23 @@ Towards the end of the paper, we will consider the cases where $\lambda \in \mat
 
 $\phi(t, y) = y'(t) = \lambda y(t)$ is linear in $y(t)$\\
 
-A lot of the findings in this paper will be represented graphically.\\
+normally, when using the exponential decay problem in a numerical analysis context, we would allow $\lambda \in \bC$. However, for the purposes of this paper, we will restrict $\lambda$ to $\bR$ as we will be looking at $h \in \bC$ and we don't want to overcomplicate things.\\
+
 
 \columnbreak{}
-Here's a graph of the exact solution for the\\ Exponential Decay Problem with $\lambda = -1$:
-
-\includegraphics[width=0.5\textwidth]{Exponential Decay/Exact with -1.png}
+\hspace*{0.75cm}
+A lot of the findings in this paper will be represented\\
+\hspace*{0.75cm}
+graphically.\\
+\hspace*{0.75cm}
+Let's start with the most basic.\\
+\hspace*{0.75cm}
+Here's a graph of the exact solution for the\\ 
+\hspace*{0.75cm}
+Exponential Decay Problem with $\lambda = -1$:
+\begin{center}
+\includegraphics[width=0.4\textwidth]{Exponential Decay/Exact with -1.png}
+\end{center}
 \end{multicols}
 
 \newpage
@@ -95,16 +106,24 @@ Euler's Forward Method has the stability function
 The corresponding stability region is 
 \[S = \Big\{ (\lambda, h) \;\Big|\; |1 + \lh| < 1\Big\}\]
 We can see this region plotted in red on the right; a unit circle centred at $-1$.\\
-For a given $\lambda \in \bC$, the method is stable for any step-size $h \in \bR$ such that\\
+For a given $\lambda \in \bC$, the method is stable for any step-size $h \in \bR$ such that $|1 + \lh| < 1$.\\
+Expanding $\lambda = a + bi$, we get the restriction
+\[|1 + (a + bi)h| < 1 \quad \implies \quad a^2h^2 + 2ah + b^2h^2 < 0\]
+As $a, b$ and $h \in \bR$, $(a^2 +b^2)h^2 > 0$\\
+$\implies 2ah < 0$ with $|2ah| > (a^2 + b^2)h^2$
 
 \vspace*{\fill}
 \columnbreak{}
-\includegraphics[width=0.5\textwidth]{Stability Regions/Graphs/Real 1-Step/Euler's Forward.png} 
+\begin{center}
+\includegraphics[width=0.49\textwidth]{Stability Regions/Graphs/Real 1-Step/Euler's Forward.png}
+\end{center}
 \end{multicols}
 
 \subsubsection{Stability Region for Euler's Backward Method}
 \begin{multicols}{2}
-\includegraphics[width=0.5\textwidth]{Stability Regions/Graphs/Real 1-Step/Euler's Backward.png}
+\begin{center}
+\includegraphics[width=0.49\textwidth]{Stability Regions/Graphs/Real 1-Step/Euler's Backward.png}
+\end{center}
 \columnbreak{}
 \vspace*{\fill}
 
@@ -139,7 +158,9 @@ The corresponding stability region is
 
 \vspace*{\fill}
 \columnbreak{}
-\includegraphics[width=0.5\textwidth]{Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png}
+\begin{center}
+\includegraphics[width=0.49\textwidth]{Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png}
+\end{center}
 \end{multicols}
 
 \subsection{Interpretation of Stability Regions}
@@ -170,4 +191,4 @@ This gives:\\
 \[y_{j+1} = y_{j-1} + h(4\lambda y_j - 2\lambda y_{j-1})\]
 Simplified:\\
 \[y_{j+1} = 4\lh y_j + (1-2\lh) y_{j-1}\]
-FURTHER DERIVATION ON WHITEBOARD - Aim: Get method in terms of $y_{j}$, $y_1$ and $y_0$ only.\\
+%FURTHER DERIVATION ON WHITEBOARD - Aim: Get method in terms of $y_{j}$, $y_1$ and $y_0$ only.\\

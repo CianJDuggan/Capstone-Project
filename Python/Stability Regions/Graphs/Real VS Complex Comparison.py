@@ -93,7 +93,7 @@ def plot_Region(stability_function, grid, points):
 
 
     # Save plot as a frame
-    plt.savefig(f'/home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/{name}.png')
+    plt.savefig(f'/home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/{name}.png', bbox_inches='tight', pad_inches=0)
     plt.show()
 
-plot_Region(RK4, 20, 2**13)
+plot_Region(EB, 20, 2**13)
