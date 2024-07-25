@@ -1,0 +1,38 @@
+\documentclass[a4paper, fleqn]{article}
+\usepackage[margin=0.5in]{geometry} % page layout
+\usepackage{amsmath,amssymb,amsthm} % maths packages
+\usepackage{tikz-cd} % commutative diagrams
+\usepackage[colorlinks, linkcolor=black, urlcolor=black, citecolor=black]{hyperref} % hyperreferences with black links
+\usepackage{graphicx} % graphics
+\usepackage{multicol} % multiple columns
+\usepackage[none]{hyphenat}  % Prevent hyphenation
+\usepackage{microtype} % Improves spacing
+
+\setlength{\parindent}{0pt} % Set the indent for new paragraphs to 0
+\setlength{\mathindent}{0pt} % Set the indent for equations to 0
+
+\tolerance=1000
+\emergencystretch=\maxdimen
+\hyphenpenalty=1000
+\hbadness=10000
+
+% Set up Diagram Paths
+\graphicspath{{/home/puca/University/Senior Sophister/Capstone/Graphs}}
+
+\input{commands.tex} % file with useful abbreviations
+
+\begin{document}
+
+\input{Section 0: Title.tex}
+\newpage
+\input{Section 1: Introduction.tex}
+\newpage
+\input{Section 2: Definitions and Concepts.tex}
+\newpage
+\input{Section 3: Stability Analysis.tex}
+\newpage
+\input{Section 4: Complex Time-Steps.tex}
+\newpage
+\input{Bibliography.tex} % bibliography
+
+\end{document}
