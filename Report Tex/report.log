@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.3)  25 JUL 2024 16:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.3)  1 AUG 2024 14:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -721,29 +721,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--55
 
  []
 
-</home/puca/University/Senior Sophister/Capstone/Graphs/Exponential Decay/Exact with -1.png, id=159, 599.841pt x 323.7696pt>
-File: /home/puca/University/Senior Sophister/Capstone/Graphs/Exponential Decay/Exact with -1.png Graphic file (type png)
-<use /home/puca/University/Senior Sophister/Capstone/Graphs/Exponential Decay/Exact with -1.png>
-Package pdftex.def Info: /home/puca/University/Senior Sophister/Capstone/Graphs/Exponential Decay/Exact with -1.png  used on input line 60.
+<../Graphs/Exponential Decay/Exact with -1.png, id=159, 599.841pt x 323.7696pt>
+File: ../Graphs/Exponential Decay/Exact with -1.png Graphic file (type png)
+<use ../Graphs/Exponential Decay/Exact with -1.png>
+Package pdftex.def Info: ../Graphs/Exponential Decay/Exact with -1.png  used on input line 60.
 (pdftex.def)             Requested size: 210.09193pt x 113.4001pt.
-[3{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </home/puca/University/Senior Sophister/Capstone/Graphs/Exponential Decay/Exact with -1.png>]
-</home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png, id=167, 611.4042pt x 604.8999pt>
-File: /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png Graphic file (type png)
-<use /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png>
-Package pdftex.def Info: /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png  used on input line 118.
+[3{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <../Graphs/Exponential Decay/Exact with -1.png>]
+<../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png, id=167, 611.4042pt x 604.8999pt>
+File: ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png Graphic file (type png)
+<use ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png>
+Package pdftex.def Info: ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png  used on input line 118.
 (pdftex.def)             Requested size: 257.36945pt x 254.63771pt.
- [4 </home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png>]
-</home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png, id=174, 611.4042pt x 604.8999pt>
-File: /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png Graphic file (type png)
-<use /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png>
-Package pdftex.def Info: /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png  used on input line 125.
+ [4 <../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png>]
+<../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png, id=174, 611.4042pt x 604.8999pt>
+File: ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png Graphic file (type png)
+<use ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png>
+Package pdftex.def Info: ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png  used on input line 125.
 (pdftex.def)             Requested size: 257.36945pt x 254.63771pt.
-</home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png, id=175, 611.4042pt x 604.8999pt>
-File: /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png Graphic file (type png)
-<use /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png>
-Package pdftex.def Info: /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png  used on input line 162.
+<../Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png, id=175, 611.4042pt x 604.8999pt>
+File: ../Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png Graphic file (type png)
+<use ../Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png>
+Package pdftex.def Info: ../Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png  used on input line 162.
 (pdftex.def)             Requested size: 257.36945pt x 254.63771pt.
- [5 </home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png> </home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png>]) [6] (./Section 4: Complex Time-Steps.tex
+ [5 <../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png> <../Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png>]) [6] (./Section 4: Complex Time-Steps.tex
 Underfull \hbox (badness 10000) in paragraph at lines 9--12
 
  []
@@ -759,23 +759,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--55
  []
 
 [7]
-</home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png, id=193, 1244.4894pt x 1205.4636pt>
-File: /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png Graphic file (type png)
-<use /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png>
-Package pdftex.def Info: /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png  used on input line 68.
+<../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png, id=193, 1244.4894pt x 1205.4636pt>
+File: ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png Graphic file (type png)
+<use ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png>
+Package pdftex.def Info: ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png  used on input line 68.
 (pdftex.def)             Requested size: 257.36945pt x 249.29211pt.
- [8 </home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png>]
-</home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png, id=200, 1244.4894pt x 1205.4636pt>
-File: /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png Graphic file (type png)
-<use /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png>
-Package pdftex.def Info: /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png  used on input line 107.
+ [8 <../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png>]
+<../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png, id=200, 1244.4894pt x 1205.4636pt>
+File: ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png Graphic file (type png)
+<use ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png>
+Package pdftex.def Info: ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png  used on input line 107.
 (pdftex.def)             Requested size: 257.36945pt x 249.29211pt.
-</home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png, id=201, 1445.4pt x 1445.4pt>
-File: /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png Graphic file (type png)
-<use /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png>
-Package pdftex.def Info: /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png  used on input line 131.
+<../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png, id=201, 1445.4pt x 1445.4pt>
+File: ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png Graphic file (type png)
+<use ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png>
+Package pdftex.def Info: ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png  used on input line 131.
 (pdftex.def)             Requested size: 257.36945pt x 257.35979pt.
-) [9 </home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png> </home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png>] (./Bibliography.tex
+) [9 <../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png> <../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png>] (./Bibliography.tex
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -790,14 +790,14 @@ Package rerunfilecheck Info: File `report.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  23975 strings out of 476076
- 452244 string characters out of 5793776
+ 450039 string characters out of 5793776
  1948187 words of memory out of 5000000
  45547 multiletter control sequences out of 15000+600000
  569976 words of font info for 116 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  116i,16n,121p,1003b,694s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on report.pdf (12 pages, 590660 bytes).
+Output written on report.pdf (12 pages, 590760 bytes).
 PDF statistics:
  306 PDF objects out of 1000 (max. 8388607)
  239 compressed objects within 3 object streams

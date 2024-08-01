@@ -327,38 +327,38 @@ INPUT ./Section 3: Stability Analysis.tex
 INPUT ./Section 3: Stability Analysis.tex
 INPUT Section 3: Stability Analysis.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Exponential Decay/Exact with -1.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Exponential Decay/Exact with -1.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Exponential Decay/Exact with -1.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Exponential Decay/Exact with -1.png
+INPUT ../Graphs/Exponential Decay/Exact with -1.png
+INPUT ../Graphs/Exponential Decay/Exact with -1.png
+INPUT ../Graphs/Exponential Decay/Exact with -1.png
+INPUT ../Graphs/Exponential Decay/Exact with -1.png
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png
+INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png
+INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png
+INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png
+INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png
+INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png
+INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png
+INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png
+INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png
+INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png
+INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png
+INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png
+INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png
 INPUT ./Section 4: Complex Time-Steps.tex
 INPUT ./Section 4: Complex Time-Steps.tex
 INPUT Section 4: Complex Time-Steps.tex
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png
-INPUT /home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png
+INPUT ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png
+INPUT ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png
+INPUT ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png
+INPUT ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png
+INPUT ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png
+INPUT ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png
+INPUT ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png
+INPUT ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png
+INPUT ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png
+INPUT ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png
+INPUT ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png
+INPUT ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png
 INPUT ./Bibliography.tex
 INPUT ./Bibliography.tex
 INPUT Bibliography.tex
