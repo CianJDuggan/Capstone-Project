@@ -9,7 +9,7 @@
 **Videos**
 
 *Euler's Forward Method*
-- [Varied b with a = 0.5](https://github.com/CianJDuggan/Capstone-Project/blob/main/Graphs/Stability%20Regions/Videos/Varied%20b/Euler's%20Forward/a%3D0.5/video.mp4)
+- [Varied b with a = 0.5](https://raw.githack.com/CianJDuggan/Capstone-Project/main/Graphs/Stability%20Regions/Videos/Varied%20b/Euler's%20Forward/a=0.5/video.mp4)
 - [Varied a with b = 0.5](https://github.com/CianJDuggan/Capstone-Project/blob/main/Graphs/Stability%20Regions/Videos/Varied%20a/Euler's%20Forward/b%3D0.5/video.mp4)
 
 *Euler's Backward Method*
