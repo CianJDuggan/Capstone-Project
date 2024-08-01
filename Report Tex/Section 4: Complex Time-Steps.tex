@@ -92,11 +92,6 @@ This means the stability region for the complex 2-step method is smaller than th
 $S_{_{\mathbb{C}}}$ is smaller than $S_{_{\mathbb{R}}}$\\
 The diagram above illustrates the case where $b = a = \frac{\lh}{2}$\\
 
-\par We can vary the $b$ value to see how the stability region changes.\\
-This series of diagrams shows the stability regions for the complex 2-step method with varying $b$ values.\\
-
-%VIDEOS SHOW b BEING VARIED\\
-
 \par We can do the same kind of analysis for other Numerical Methods.\\
 Below are the same derivations and diagrams for the Backward Euler and Runge-Kutta 4 methods.\\
 \newpage
@@ -145,3 +140,53 @@ Below are the same derivations and diagrams for the Backward Euler and Runge-Kut
 
 Computer Calculated Complex; should probably be checked\\
 $1 + \lh + \frac{\lh^2}{2} + \frac{\lh^3}{6} + \frac{\lh^4}{24} + \frac{\lh^5}{128} + \frac{5 \lh^6}{4608} + \frac{\lh^7}{9216} + \frac{\lh^8}{147456} + \frac{b^2 \lh^3}{48} + \frac{b^2 \lh^4}{128} + \frac{b^2 \lh^5}{768} + \frac{b^2 \lh^6}{9216} + \frac{b^4 \lh}{24} - \frac{b^4 \lh^2}{96} + \frac{b^4 \lh^3}{192} + \frac{b^4 \lh^4}{1536} - \frac{b^6}{72} + \frac{b^6 \lh}{144} + \frac{b^6 \lh^2}{576} + \frac{b^8}{576}$
+
+\subsection{Varying $b$ for Complex Conjugate Step Pairs}
+\par As mentioned earlier, we need not focus on the case where $b = \frac{\lh}{2}$\\
+We can vary $b$ and see how the stability regions change.\\
+In the cases below, we have preserved $a = \frac{\lh}{2}$\\
+Consequently, these are still complex conjugate step pairs.\\
+Videos showing the stability regions for varying $b$ values can be found in the \textit{GitHub Repository}\cite{GitHub_Repo} for this project.\\
+Below are some of the video frames for each method.\\
+\subsubsection{Euler's Forward}
+\begin{multicols}{3}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0200.png}
+	\end{center}
+	\columnbreak{}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0350.png}
+	\end{center}
+	\columnbreak{}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0500.png}
+	\end{center}
+\end{multicols}
+\subsubsection{Euler's Backward}
+\begin{multicols}{3}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0200.png}
+	\end{center}
+	\columnbreak{}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0350.png}
+	\end{center}
+	\columnbreak{}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0500.png}
+	\end{center}
+\end{multicols}
+\subsubsection{Runga-Kutta 4}
+\begin{multicols}{3}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0200.png}
+	\end{center}
+	\columnbreak{}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0350.png}
+	\end{center}
+	\columnbreak{}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0500.png}
+	\end{center}
+\end{multicols}

@@ -359,6 +359,42 @@ INPUT ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 
 INPUT ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png
 INPUT ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png
 INPUT ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0200.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0200.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0200.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0200.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0350.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0350.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0350.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0350.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0500.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0500.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0500.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0500.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0200.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0200.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0200.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0200.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0350.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0350.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0350.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0350.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0500.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0500.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0500.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0500.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0200.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0200.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0200.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0200.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0350.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0350.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0350.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0350.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0500.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0500.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0500.png
+INPUT ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0500.png
 INPUT ./Bibliography.tex
 INPUT ./Bibliography.tex
 INPUT Bibliography.tex
@@ -370,6 +406,7 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb

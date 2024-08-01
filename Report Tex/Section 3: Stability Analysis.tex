@@ -41,7 +41,7 @@ The solution decays to zero as $t \rightarrow \infty$ when $Re(\lambda) < 0$.\\
 
 \par Normally, when using the exponential decay problem in a numerical analysis context, we would allow $\lambda \in \bC$ with $Re(\lambda)<0$.\\
 However, for the purposes of this paper, we will restrict $\lambda$ to $\bR$ as we will be looking at $h \in \bC$ and we don't want to overcomplicate things.\\
-Unless otherwise mentioned, we will assume that $\lambda \in \bR$ and $\lambda < 0$ for the rest of this paper.\\
+Unless otherwise mentioned, we will assume that $\lambda \in \bR^{-}$ for the rest of this paper.\\
 
 \par $\phi(t, y) = y'(t) = \lambda y(t)$ is linear in $y(t)$\\
 
@@ -67,9 +67,7 @@ exponential decay problem with $\lambda = -1$:
 \par We will now consider a simple numerical method applied to the exponential decay problem.
 The Forward Euler method is a first-order numerical method for solving ODEs with a given initial condition.
 Its algorithm can be defined as follows:
-\[ y(t_{j+1}) = y(t_j) + h y'(t_j)\]
-Or equivalently:
-\[ y_{j+1} = y_j + h \phi(t_j, y_j)\]
+\[ y(t_{j+1}) = y(t_j) + h y'(t_j) \qquad \text{Or equivalently:} \qquad y_{j+1} = y_j + h \phi(t_j, y_j)\]
 Where $h$ is the time step and $y_j$ is the numerical solution at time $t_j$.
 
 \par For the exponential decay problem, the Forward Euler method can be written as:
