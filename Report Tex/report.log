@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.3)  1 AUG 2024 15:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.3)  6 AUG 2024 14:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -563,7 +563,9 @@ LaTeX Info: Redefining \lslig on input line 902.
 Package microtype Info: Loading configuration file microtype.cfg.
  (/usr/share/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
-)) (./commands.tex (/usr/share/texmf-dist/tex/latex/tools/xspace.sty
+)) (./commands.tex
+\c@theorem=\count322
+ (/usr/share/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 ) (/usr/share/texmf-dist/tex/latex/bbm-macros/bbm.sty
 Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
@@ -573,7 +575,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 (Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
 )) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count322
+\l__color_backend_stack_int=\count323
 \l__pdf_internal_box=\box111
 ) (./report.aux)
 \openout1 = `report.aux'.
@@ -633,16 +635,16 @@ LaTeX Font Info:    ... okay on input line 24.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count323
+\scratchcounter=\count324
 \scratchdimen=\dimen284
 \scratchbox=\box112
-\nofMPsegments=\count324
-\nofMParguments=\count325
+\nofMPsegments=\count325
+\nofMParguments=\count326
 \everyMPshowfont=\toks44
-\MPscratchCnt=\count326
+\MPscratchCnt=\count327
 \MPscratchDim=\dimen285
-\MPnumerator=\count327
-\makeMPintoPDFobject=\count328
+\MPnumerator=\count328
+\makeMPintoPDFobject=\count329
 \everyMPtoPDFconversion=\toks45
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -721,24 +723,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--55
 
  []
 
-<../Graphs/Exponential Decay/Exact with -1.png, id=180, 599.841pt x 323.7696pt>
+<../Graphs/Exponential Decay/Exact with -1.png, id=200, 599.841pt x 323.7696pt>
 File: ../Graphs/Exponential Decay/Exact with -1.png Graphic file (type png)
 <use ../Graphs/Exponential Decay/Exact with -1.png>
 Package pdftex.def Info: ../Graphs/Exponential Decay/Exact with -1.png  used on input line 60.
 (pdftex.def)             Requested size: 210.09193pt x 113.4001pt.
 [3{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <../Graphs/Exponential Decay/Exact with -1.png>]
-<../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png, id=188, 611.4042pt x 604.8999pt>
+<../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png, id=208, 611.4042pt x 604.8999pt>
 File: ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png Graphic file (type png)
 <use ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png>
 Package pdftex.def Info: ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png  used on input line 116.
 (pdftex.def)             Requested size: 257.36945pt x 254.63771pt.
  [4 <../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png>]
-<../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png, id=194, 611.4042pt x 604.8999pt>
+<../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png, id=214, 611.4042pt x 604.8999pt>
 File: ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png Graphic file (type png)
 <use ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png>
 Package pdftex.def Info: ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png  used on input line 123.
 (pdftex.def)             Requested size: 257.36945pt x 254.63771pt.
-<../Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png, id=195, 611.4042pt x 604.8999pt>
+<../Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png, id=215, 611.4042pt x 604.8999pt>
 File: ../Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png Graphic file (type png)
 <use ../Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png>
 Package pdftex.def Info: ../Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png  used on input line 160.
@@ -759,103 +761,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--55
  []
 
 [7]
-<../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png, id=213, 1244.4894pt x 1205.4636pt>
+<../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png, id=233, 1244.4894pt x 1205.4636pt>
 File: ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png Graphic file (type png)
 <use ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png>
-Package pdftex.def Info: ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png  used on input line 68.
+Package pdftex.def Info: ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png  used on input line 87.
 (pdftex.def)             Requested size: 257.36945pt x 249.29211pt.
  [8 <../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png>]
-<../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png, id=220, 1244.4894pt x 1205.4636pt>
+<../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png, id=243, 1244.4894pt x 1205.4636pt>
 File: ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png Graphic file (type png)
 <use ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png>
-Package pdftex.def Info: ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png  used on input line 102.
+Package pdftex.def Info: ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png  used on input line 143.
 (pdftex.def)             Requested size: 257.36945pt x 249.29211pt.
-<../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png, id=221, 1445.4pt x 1445.4pt>
+ [9 <../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png>]
+<../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png, id=251, 1445.4pt x 1445.4pt>
 File: ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png Graphic file (type png)
 <use ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png>
-Package pdftex.def Info: ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png  used on input line 126.
+Package pdftex.def Info: ../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png  used on input line 176.
 (pdftex.def)             Requested size: 257.36945pt x 257.35979pt.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 144.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 144.
-
-[9 <../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png> <../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png>]
-<../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0200.png, id=232, 2890.8pt x 2890.8pt>
+ [10 <../Graphs/Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png>]
+<../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0200.png, id=260, 2890.8pt x 2890.8pt>
 File: ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0200.png Graphic file (type png)
 <use ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0200.png>
-Package pdftex.def Info: ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0200.png  used on input line 154.
+Package pdftex.def Info: ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0200.png  used on input line 212.
 (pdftex.def)             Requested size: 168.07996pt x 168.0591pt.
-<../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0350.png, id=233, 2890.8pt x 2890.8pt>
+<../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0350.png, id=261, 2890.8pt x 2890.8pt>
 File: ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0350.png Graphic file (type png)
 <use ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0350.png>
-Package pdftex.def Info: ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0350.png  used on input line 158.
+Package pdftex.def Info: ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0350.png  used on input line 216.
 (pdftex.def)             Requested size: 168.07996pt x 168.0591pt.
-<../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0500.png, id=234, 2890.8pt x 2890.8pt>
+<../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0500.png, id=262, 2890.8pt x 2890.8pt>
 File: ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0500.png Graphic file (type png)
 <use ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0500.png>
-Package pdftex.def Info: ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0500.png  used on input line 162.
+Package pdftex.def Info: ../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0500.png  used on input line 220.
 (pdftex.def)             Requested size: 168.07996pt x 168.0591pt.
-<../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0200.png, id=235, 2890.8pt x 2890.8pt>
+<../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0200.png, id=263, 2890.8pt x 2890.8pt>
 File: ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0200.png Graphic file (type png)
 <use ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0200.png>
-Package pdftex.def Info: ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0200.png  used on input line 168.
-(pdftex.def)             Requested size: 168.07996pt x 168.0591pt.
-<../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0350.png, id=236, 2890.8pt x 2890.8pt>
-File: ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0350.png Graphic file (type png)
-<use ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0350.png>
-Package pdftex.def Info: ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0350.png  used on input line 172.
-(pdftex.def)             Requested size: 168.07996pt x 168.0591pt.
-<../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0500.png, id=237, 2890.8pt x 2890.8pt>
-File: ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0500.png Graphic file (type png)
-<use ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0500.png>
-Package pdftex.def Info: ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0500.png  used on input line 176.
-(pdftex.def)             Requested size: 168.07996pt x 168.0591pt.
-<../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0200.png, id=238, 2890.8pt x 2890.8pt>
-File: ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0200.png Graphic file (type png)
-<use ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0200.png>
-Package pdftex.def Info: ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0200.png  used on input line 182.
-(pdftex.def)             Requested size: 168.07996pt x 168.0591pt.
-<../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0350.png, id=239, 2890.8pt x 2890.8pt>
-File: ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0350.png Graphic file (type png)
-<use ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0350.png>
-Package pdftex.def Info: ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0350.png  used on input line 186.
-(pdftex.def)             Requested size: 168.07996pt x 168.0591pt.
-<../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0500.png, id=240, 2890.8pt x 2890.8pt>
-File: ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0500.png Graphic file (type png)
-<use ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0500.png>
-Package pdftex.def Info: ../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0500.png  used on input line 190.
-(pdftex.def)             Requested size: 168.07996pt x 168.0591pt.
-) [10 <../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0200.png> <../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0350.png> <../Graphs/Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0500.png> <../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0200.png> <../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0350.png> <../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0500.png> <../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0200.png> <../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0350.png> <../Graphs/Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0500.png>] (./Bibliography.tex
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-) [11] (./report.aux)
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-02-20>
- ***********
-Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 38EB8C885299C86EF0E95FCDC7685E61;5667.
- ) 
-Here is how much of TeX's memory you used:
- 24067 strings out of 476076
- 457119 string characters out of 5793776
- 1950187 words of memory out of 5000000
- 45633 multiletter control sequences out of 15000+600000
- 569976 words of font info for 116 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 116i,16n,121p,1003b,694s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on report.pdf (13 pages, 2386900 bytes).
-PDF statistics:
- 358 PDF objects out of 1000 (max. 8388607)
- 270 compressed objects within 3 object streams
- 46 named destinations out of 1000 (max. 500000)
- 31549 words of extra memory for PDF output out of 35830 (max. 10000000)
-
+Package pdftex.def Info: ../Graphs/Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0200.png  used on input line 226.
+(pdftex.def)          

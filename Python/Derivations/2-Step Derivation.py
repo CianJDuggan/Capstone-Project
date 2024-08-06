@@ -5,8 +5,10 @@ a, b, lh = sp.symbols('a b lh')
 i = sp.I
 
 # Define complex numbers
-z1 = a + b*i
-z2 = lh - z1
+#z1 = a + b*i
+#z2 = lh - z1
+z1 = lh/2
+z2 = lh/2
 
 # List of stability equations with names and corresponding lambda functions for s1
 stability_equations = {
