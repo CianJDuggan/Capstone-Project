@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1723035220.26618 "report.tex" "report.pdf" "report" 1723035236.8132 0
+["pdflatex"] 1723641565.58654 "report.tex" "report.pdf" "report" 1723641583.02738 0
   "../Graphs/Exponential Decay/Exact with -1.png" 1721921876.62915 21311 1bc9ee362c5a9636c8fa342e86b869d5 ""
   "../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Backward.png" 1721916705.32074 25668 e2f4bc9d6982a89d71494c957a942219 ""
   "../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png" 1721916693.92093 25676 6c9bcbddf165e7a241c83906e23f98ee ""
@@ -213,14 +213,14 @@
   "Bibliography.tex" 1722521409.23042 645 8b623c53f25190adfaa129f80cbe51d6 ""
   "Section 0: Title.tex" 1721907923.56311 231 996f9a1f54b46c11efea07b1ccbddf27 ""
   "Section 1: Introduction.tex" 1722952885.15562 1851 0b72147c9a72fbddafcd6cd5d8db8b01 ""
-  "Section 2: Definitions and Concepts.tex" 1721915498.07067 2767 3e38042cf32343afa9a2aacd16cec2f1 ""
-  "Section 3: Stability Analysis.tex" 1722962771.55647 9916 736cdda0044fc1f6aa042a73b1f2b769 ""
-  "Section 4: Complex Time-Steps.tex" 1722975036.00257 21506 384bba9efc599aacc0a007ef90a3c047 ""
-  "commands.tex" 1722636858.71807 1131 ceb2982cbb08db3a4d1fc5535cab4bce ""
-  "report.aux" 1723035236.63333 4749 5a6b8887b6771d5ce0c9e05e193e427f "pdflatex"
-  "report.out" 1723035236.63455 6206 149f8c91ba21e4c8ac5186c76076e8d2 "pdflatex"
-  "report.tex" 1723035018.0676 1112 f0aac86ce4dafb1e6480471bc9b3d074 ""
-  "report.toc" 1723035236.63517 3031 429aee52c298a2a104253fc570ced4c3 "pdflatex"
+  "Section 2: Definitions and Concepts.tex" 1723066400.63537 2767 3e38042cf32343afa9a2aacd16cec2f1 ""
+  "Section 3: Stability Analysis.tex" 1723411348.9032 9916 736cdda0044fc1f6aa042a73b1f2b769 ""
+  "Section 4: Complex Time-Steps.tex" 1723641560.10732 21518 c4cbd1202c7f389532e0dbf53d06a5fd ""
+  "commands.tex" 1723297007.45894 1131 ceb2982cbb08db3a4d1fc5535cab4bce ""
+  "report.aux" 1723641582.70997 4749 5a6b8887b6771d5ce0c9e05e193e427f "pdflatex"
+  "report.out" 1723641582.71186 6206 149f8c91ba21e4c8ac5186c76076e8d2 "pdflatex"
+  "report.tex" 1723411351.57516 1112 f0aac86ce4dafb1e6480471bc9b3d074 ""
+  "report.toc" 1723641582.71309 3031 429aee52c298a2a104253fc570ced4c3 "pdflatex"
   (generated)
   "report.aux"
   "report.log"

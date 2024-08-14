@@ -74,7 +74,7 @@ Euler's Forward 2-Step Method is given by:
 	y_{j+1} &= s(\lambda, z_1) s(\lambda, z_2)\; y_j && \\
 	&= \Big(1 + z_1\Big)\Big(1 + z_2\Big)\; y_j && \\
 	&= \Big(1+a_1+b_1 i\Big)\Big(1+a_2+b_2 i\Big)\; y_j && \\
-	&= \Big(1 + a_1 + a_2 +a_1 a_2 - b_1 b_2\Big) + \Big(b_1 + b_2 + a_1 b_2 + a_2 b_1\Big)i\; y_j &&
+	&= \Bigg(\Big(1 + a_1 + a_2 +a_1 a_2 - b_1 b_2\Big) + \Big(b_1 + b_2 + a_1 b_2 + a_2 b_1\Big)i\Bigg)\; y_j &&
 \end{flalign*}
 \[y_{j+1} \in \bR \implies Im(y_{j+1}) = 0 \implies b_1 + b_2 + a_1 b_2 + a_2 b_1 = 0 \implies (1+a_1)b_2 + (1+a_2)b_1 = 0\]
 \[z_1+z_2 = h \in \bR \implies a_1+a_2 + (b_1+b_2)i = h \implies b_1+b_2 = 0 \implies b_1 = -b_2\]
