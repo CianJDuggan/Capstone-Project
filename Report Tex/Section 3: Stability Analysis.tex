@@ -34,8 +34,8 @@ This has the exact solution $y(t) = e^{\lambda t}$.\\
 
 \subsubsection{Additional Details}
 \begin{multicols}{2}
-The Taylor series for the exact solution is 
-\[y(t) = \sum\limits_{n=0}^{\infty} \frac{{(t)}^n}{n!}\]
+The exact solution is also given by the Macaulin series:
+\[y(h) = \sum\limits_{n=0}^{\infty} \frac{{(\lh)}^n}{n!} \quad\text{which we will denote}\; M(y)\]
 
 The solution decays to zero as $t \rightarrow \infty$ when $Re(\lambda) < 0$.\\
 
@@ -100,7 +100,7 @@ Clearly, $y_{j} = {s(\lambda,h)}^{j} y_0$ will decay to zero as $j \rightarrow \
 \vspace*{\fill}
 
 Euler's Forward Method has the stability function
-\[s(\lambda, h) = 1 + \lh\]
+\[s(\lambda, h) = 1 + \lh = \sum\limits_{n=0}^{1} \frac{{(\lh)}^n}{n!} = M(y) + \mathcal{O}((\lh)^2)\]
 The corresponding stability region is 
 \[S = \Big\{ (\lambda, h) \;\Big|\; |1 + \lh| < 1\Big\}\]
 We can see this region plotted in red on the right; an open unit circle centred at $-1$.\\
@@ -150,9 +150,10 @@ Where
 \end{flalign*}
 For the Exponential Decay Problem, we get
 \[y_{j+1} = (1 + \lh + \frac{{(\lh)}^2}{2} + \frac{{(\lh)}^3}{6} + \frac{{(\lh)}^4}{24})y_j\]
-The stability function is $s(\lambda, h) = \sum\limits_{m=0}^{4}\frac{{(\lh)}^m}{m!}$\\
+The stability function is
+\[s(\lambda, h) = \sum\limits_{n=0}^{4}\frac{{(\lh)}^n}{n!} = M(y) + \mathcal{O}((\lh)^5)\]
 The corresponding stability region is
-\[S = \Big\{ (\lambda, h) \;\Big|\; \left|\sum\limits_{m=0}^{4}\frac{{(\lh)}^m}{m!}\right| < 1\Big\}\]
+\[S = \Big\{ (\lambda, h) \;\Big|\; \left|\sum\limits_{n=0}^{4}\frac{{(\lh)}^n}{n!}\right| < 1\Big\}\]
 
 \vspace*{\fill}
 \columnbreak{}

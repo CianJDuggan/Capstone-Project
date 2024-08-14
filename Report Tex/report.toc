@@ -1,0 +1,32 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}Definitions and Concepts}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Time Steps}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Complex-Variable Method}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Stability}{2}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Stability Analysis}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Introduction}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Exponential Decay Problem}{3}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Proponents of the Exponential Decay Problem}{3}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Additional Details}{3}{subsubsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.3}Numerical Method: Forward Euler}{4}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}The Stability Function and corresponding Stability Region}{4}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Stability Region for Euler's Forward Method}{4}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Stability Region for Euler's Backward Method}{4}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}Stability Region for Runge-Kutta 4}{5}{subsubsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.5}Interpretation of Stability Regions}{5}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Numerical Method: 2-step Abysmal Kramer-Butler Method}{6}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Complex Time-Steps}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Complex 2-Step}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Complex Conjugate Pairs}{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Stability of 2-Step Methods for Complex Conjugate Step Pairs}{7}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Euler's Forward 2-Step}{8}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Euler's Backward 2-Step}{9}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Runge-Kutta 4 2-Step}{10}{subsubsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.4}Varying b for Complex Conjugate Step Pairs}{10}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Euler's Forward}{11}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Euler's Backward}{11}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}Runga-Kutta 4}{11}{subsubsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.5}Varying a}{11}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Euler's Forward}{12}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Euler's Backward}{12}{subsubsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.3}Runga-Kutta 4}{12}{subsubsection.4.5.3}%

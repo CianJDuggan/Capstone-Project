@@ -54,7 +54,6 @@ This necessitates $z_2 = \bar{z_1}$\\
 We will refer to this family as the \term{complex conjugate step pairs}.\\
 \end{multicols}
 
-\newpage
 \subsection{Stability of 2-Step Methods for Complex Conjugate Step Pairs}
 \par In this section we will compare the stability regions for the real and complex 2-step methods.\\
 The real step size is given by $\frac{\lh}{2}$\\
@@ -62,6 +61,7 @@ The complex conjugate step pair is given by $z = \frac{\lh}{2} + bi$ and $\bar{z
 The plots in this section show the regions of stability $S = \{h : |s(\lambda, h)| \leq 1\}$ for the case where $b=a=\frac{\lh}{2}$\\
 We will have a look at varying $b$ in a subsequent section.\\
 
+\newpage
 \subsubsection{Euler's Forward 2-Step}
 \begin{theorem}\textbf{Euler's Forward Complex Step Pairs must be Conjugate}
 \par For the exponential decay problem, $y=e^{\lambda t}$, let $\lambda \in \bR$\\
@@ -110,9 +110,13 @@ Thus, $z_1, z_2 \in \bC \implies a_1 = a_2$ and $b_1 = -b_2$
 This means the stability region for the complex 2-step method is smaller than that of the real 2-step method; there are less values of $\lh$ for which the complex 2-step method is stable.\\
 $S_{_{\mathbb{C}}}$ is smaller than $S_{_{\mathbb{R}}}$\\
 The diagram above illustrates the case where $b = a = \frac{\lh}{2}$\\
+In this case, we have 
+\[s_{_{\mathbb{C}}}(\lambda, h) = 1 + \lh + \frac{{(\lambda h)}^2}{2} = M(y) + \mathcal{O}((\lh)^3)\] while
+\[s_{_{\mathbb{R}}}(\lambda, h) = 1 + \lh + \frac{{(\lambda h)}^2}{4} = M(y) + \mathcal{O}((\lh)^2)\]
+The complex 2-step method has a higher order of accuracy than the real 2-step method, with the trade-off of a smaller stability region.\\
 
 \par We can do the same kind of analysis for other Numerical Methods.\\
-Below are the same derivations and diagrams for the Backward Euler and Runge-Kutta 4 methods.\\
+The same derivations and diagrams for the Backward Euler and Runge-Kutta 4 methods follow.\\
 
 \subsubsection{Euler's Backward 2-Step}
 \begin{theorem}\textbf{Euler's Backward Complex Step Pairs must be Conjugate}\\
@@ -179,7 +183,7 @@ Imaginary: $\frac{a^{4} c^{3} d}{144} + \frac{a^{4} c^{2} d}{48} - \frac{a^{4} c
 
 \textbf{Runge-Kutta 4 2-Step $\bR$}
 \begin{flalign*} 
-	y_{j+1} &= {\bigg(1+\frac{\frac{\lh}{2}}{2}+\frac{{(\frac{\lh}{2})}^2}{2}+\frac{{(\frac{\lh}{2})}^3}{6}+\frac{{(\frac{\lh}{2})}^4}{24}\bigg)}^2 y_j && \\
+	y_{j+1} &= {\bigg(1+\frac{\lh}{2}+\frac{{(\frac{\lh}{2})}^2}{2}+\frac{{(\frac{\lh}{2})}^3}{6}+\frac{{(\frac{\lh}{2})}^4}{24}\bigg)}^2 y_j && \\
 	y_{j+1} &= \bigg(1+\lh+\frac{{(\lh)}^2}{2}+\frac{{(\lh)}^3}{6}+\frac{{(\lh)}^4}{24} && \\
             &\quad\,\,\,\,+\frac{{(\lh)}^5}{128}+\frac{5{(\lh)}^6}{4608}+\frac{{(\lh)}^7}{9216}+\frac{{(\lh)}^8}{147456}\bigg) y_j && \\
 	\implies &s_{_{\bR}}(\lambda, h) = 1+\lh+\frac{{(\lh)}^2}{2}+\frac{{(\lh)}^3}{6}+\frac{{(\lh)}^4}{24} && \\
@@ -204,7 +208,7 @@ Below are some of the video frames for each method.\\
 	\item The stability region for complex conjugate pairs is always symmetric accross the real axis.\\
 	      
 	\item As $b$ increases, the stability region shrinks.\\
-	      This can be seen quite simply in the $s_{_{\bC}}(\lambda, h)$ equation for each method.
+	      This can be seen quite simply in the $s_{_{\bC}}(\lambda, h)$ equation for Euler's Forward and Backward methods.\\
 \end{itemize}
 \subsubsection{Euler's Forward}
 \begin{multicols}{3}
