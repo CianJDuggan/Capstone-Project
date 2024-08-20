@@ -1,0 +1,310 @@
+\section{Complex Time-Steps}
+So far, we have restricted ourselves to time-steps in the real domain.\\
+It has often proven useful to extend the analysis of a problem to the complex domain.\\
+Motivated by a paper by \textit{George, Yung and Mangan}\cite{walking_into_the_complex_domain}, we will have a look at the stability of numerical methods when the chosen time-step is complex.\\
+They state: \begin{quote} \textit {Most numerical methods for time integration use real time steps. Complex time steps provide an additional degree of freedom, as we can select the magnitude of the step in both the real and imaginary directions. By time stepping along specific paths in the complex plane, integrators can gain higher orders of accuracy or achieve expanded stability regions.}\end{quote}
+
+\subsection{Complex 2-Step}
+\begin{multicols}{2}
+\par We want to take an overall step of size $\lh \in \bR$ comprised of two steps $z_1, z_2 \in \bC$ such that $z_1 + z_2 = \lh$.\\
+We can set $z_1 = a + bi$ and $z_2 = \lh - a - bi$.\\
+For analysing our numerical methods, we require a comparable implementation of the real step setup.\\
+
+\par A real 2-step method where we take a step of size $\frac{\lh}{2}$ allows us to take two steps and go the same distance as the complex 2-step method.\\
+We can write this real 2-step method as $y_{j+1} = {s(\lambda, \frac{h}{2})}^{2} y_j$.\\
+\textbf{Note:} We can write this explicitly as 
+\[y_{j+1} = s(\lambda, \frac{h}{2}) y_{j+\frac{1}{2}} = s(\lambda, \frac{h}{2}) s(\lambda, \frac{h}{2}) y_j\]
+
+\par We can write the complex 2-step method as 
+\[y_{j+1} = s(\lambda, z_1) s(\lambda, z_2) y_j\]
+\textbf{Note:} We can write this explicitly as 
+\[y_{j+1} = s(\lambda, z_1) y_{j+\frac{1}{2}} = s(\lambda, z_1) s(\lambda, z_2) y_j\]
+
+\columnbreak{}
+% Triangle diagram
+\begin{tikzpicture}
+	\draw[->] (0,0) -- (8,0) node[right] {$Re$};
+	\draw[->] (0,0) -- (0,8) node[above] {$Im$};
+	\draw[-, color=orange] (0,0) -- (5,7) node[midway, shift={(-0.2,0)}, left] {$z_1$};
+	\draw[-, color=orange] (5,7) -- (7,0) node[midway, shift={(0.1,0)}, right] {$z_1 + z_2$};
+	\draw[color=purple] (0,0) -- (7,0) node[midway, below] {$\lh$};
+\end{tikzpicture}
+\end{multicols}
+
+
+\subsection{Complex Conjugate Pairs}
+\begin{multicols}{2}
+% Triangle diagram
+\begin{tikzpicture}
+	\draw[->] (0,0) -- (7,0) node[right] {$Re$};
+	\draw[->] (0,0) -- (0,4.5) node[above] {$Im$};
+	\draw[-, color=orange] (0,0) -- (3,3.5) node[midway, shift={(-0.2,0)}, left] {$z$};
+	\draw[-, color=orange] (3,3.5) -- (6,0) node[midway, shift={(0.1,0)}, right] {$z + \bar{z}$};
+	\draw[-, color=purple] (0,0) -- (3,0) node[midway, below] {$\frac{\lh}{2}$};
+	\draw[-, color=purple] (3,0) -- (6,0) node[midway, below] {$\frac{\lh}{2}$};
+	\draw[-, color=blue] (3,0) -- (3,3.5) node[midway, right] {$b$};
+\end{tikzpicture}
+\columnbreak{}
+\par When we restrict the exponential decay problem by $\lambda \in \bR$, we also find that $s(\lambda, z_1) s(\lambda, z_2) \in \bR$\\
+This is because any value attained by $e^{\lambda t}$ is real.\\
+This restricts the values of $z_1$ and $z_2$, as any imaginary terms in $s(\lambda, z_1) s(\lambda, z_2)$ must cancel out.\\
+
+\par One particularly simple family of such complex pairs is defined by setting $a = \frac{\lh}{2}$\\
+This necessitates $z_2 = \bar{z_1}$\\
+We will refer to this family as the \term{complex conjugate step pairs}.\\
+\end{multicols}
+
+\subsection{Stability of 2-Step Methods for Complex Conjugate Step Pairs}
+\par In this section we will compare the stability regions for the real and complex 2-step methods.\\
+The real step size is given by $\frac{\lh}{2}$\\
+The complex conjugate step pair is given by $z = \frac{\lh}{2} + bi$ and $\bar{z} = \frac{\lh}{2} - bi$\\
+The plots in this section show the regions of stability $S = \{h : |s(\lambda, h)| \leq 1\}$ for the case where $b=a=\frac{\lh}{2}$\\
+We will have a look at varying $b$ in a subsequent section.\\
+
+\newpage
+\subsubsection{Euler's Forward 2-Step}
+\begin{theorem}\textbf{Euler's Forward Complex Step Pairs must be Conjugate for $\lambda \in \bR$}\\
+\par For the exponential decay problem, $y=e^{\lambda t}$, let $\lambda \in \bR$\\
+Let $z_1 = a_1 + b_1i$ and $z_2 = a_2 + b_2i$ be a complex step pair for Euler's Forward 2-Step Method.\\
+Then we must have $z_2 = \bar{z_1}$\\
+\par\textbf{Proof:}
+\[\lambda \in \bR \implies y_{j}, y_{j+1} \in \bR\]
+Euler's Forward 2-Step Method is given by:
+\begin{flalign*}
+	y_{j+1} &= s(\lambda, z_1) s(\lambda, z_2)\; y_j && \\
+	&= \Big(1 + z_1\Big)\Big(1 + z_2\Big)\; y_j && \\
+	&= \Big(1+a_1+b_1 i\Big)\Big(1+a_2+b_2 i\Big)\; y_j && \\
+	&= \Bigg(\Big(1 + a_1 + a_2 +a_1 a_2 - b_1 b_2\Big) + \Big(b_1 + b_2 + a_1 b_2 + a_2 b_1\Big)i\Bigg)\; y_j &&
+\end{flalign*}
+\[y_{j+1} \in \bR \implies Im(y_{j+1}) = 0 \implies b_1 + b_2 + a_1 b_2 + a_2 b_1 = 0 \implies (1+a_1)b_2 + (1+a_2)b_1 = 0\]
+\[z_1+z_2 = h \in \bR \implies a_1+a_2 + (b_1+b_2)i = h \implies b_1+b_2 = 0 \implies b_1 = -b_2\]
+\[(1+a_1)b_2 + (1+a_2)b_1 = 0 \implies (1+a_1)b_2 - (1+a_2)b_2 = 0 \implies b_2 = 0 = b_1 \text{ or } a_1 = a_2\]
+Thus, $z_1, z_2 \in \bC \implies a_1 = a_2$ and $b_1 = -b_2$
+\[\therefore z_1 = a_1 + b_1i \text{ and } z_2 = a_1 - b_1i \implies z_2 = \bar{z_1} \qquad\square\]
+\end{theorem}
+\begin{multicols}{2}
+\begin{center}
+\includegraphics[width=0.49\textwidth]{Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png}
+\end{center}
+\columnbreak{}
+
+\textbf{Euler's Forward 2-Step $\bR$}
+\begin{flalign*}
+	y_{j+1} &= {\Big(1+ \frac{\lh}{2}\Big)}^2 y_j && \\
+	\implies &s_{_{\bR}}(\lambda, h) = 1 + \lh + \frac{{(\lh)}^2}{4} &&
+\end{flalign*}
+
+\textbf{Euler's Forward 2-Step $\bC$}
+\begin{flalign*}
+	y_{j+1} &= \Big(1 + z\Big)\Big(1 + \bar{z}\Big) y_j && \\
+	    &= \Big(1 + \frac{\lambda h}{2} + bi\Big)\Big(1 + \frac{\lambda h}{2} - bi\Big) y_j && \\
+	    &= \bigg(\Big{(1 + \frac{\lambda h}{2}\Big)}^2 + b^2\bigg) y_j && \\
+    \implies &s_{_{\mathbb{C}}}(\lambda, h) = 1 + \lambda h + \frac{{(\lambda h)}^2}{4} + b^2 && \\
+    \implies &s_{_{\mathbb{C}}}(\lambda, h) = s_{_{\mathbb{R}}}(\lambda, h) + b^2 &&
+\end{flalign*}
+
+\vspace*{\fill}
+\end{multicols}
+
+\par As $b \in \bR$, $s_{_{\mathbb{C}}}(\lambda, h) \geq s_{_{\mathbb{R}}}(\lambda, h)$\\
+This means the stability region for the complex 2-step method is smaller than that of the real 2-step method; there are less values of $\lh$ for which the complex 2-step method is stable.\\
+$S_{_{\mathbb{C}}}$ is smaller than $S_{_{\mathbb{R}}}$\\
+The diagram above illustrates the case where $b = a = \frac{\lh}{2}$\\
+In this case, we have 
+\[s_{_{\mathbb{C}}}(\lambda, h) = 1 + \lh + \frac{{(\lambda h)}^2}{2} = M(y) + \mathcal{O}({(\lh)}^3)\] while
+\[s_{_{\mathbb{R}}}(\lambda, h) = 1 + \lh + \frac{{(\lambda h)}^2}{4} = M(y) + \mathcal{O}({(\lh)}^2)\]
+The complex 2-step method has a higher order of accuracy than the real 2-step method, with the trade-off of a smaller stability region.\\
+
+\par We can do the same kind of analysis for other Numerical Methods.\\
+The same derivations and diagrams for the Backward Euler and Runge-Kutta 4 methods follow.\\
+
+\subsubsection{Euler's Backward 2-Step}
+\begin{theorem}\textbf{Euler's Backward Complex Step Pairs must be Conjugate for $\lambda \in \bR$}\\
+\par For the exponential decay problem, $y=e^{\lambda t}$, let $\lambda \in \bR$\\
+Let $z_1 = a_1 + b_1i$ and $z_2 = a_2 + b_2i$ be a complex step pair for Euler's Backward 2-Step Method.\\
+Then we must have $z_2 = \bar{z_1}$\\
+\par\textbf{Proof:}
+\[\lambda \in \bR \implies y_{j}, y_{j+1} \in \bR\]
+Euler's Backward 2-Step Method is given by:
+\begin{flalign*}
+	y_{j+1} &= s(\lambda, z_1) s(\lambda, z_2)\; y_j && \\
+	&= \Big(\frac{1}{1-z_1}\Big)\Big(\frac{1}{1-z_2}\Big)\; y_j && \\
+        &= \Big(\frac{1}{(1-z_1)(1-z_2)}\Big)\; y_j &&
+\end{flalign*}
+\begin{flalign*}
+	(1-z_1)(1-z_2) &= (1-a_1-b_1i)(1-a_2-b_2i) &&\\
+		       &= \big[1-a_1-a_2+a_1 a_2-b_1 b_2\big] + \big[a_1 b_2 + a_2 b_1 - b_1 - b_2\big]i && \\
+		       &= \big[(a_1-1)(a_2-1)-b_1 b_2\big] + \big[b_1(a_2-1) + b_2(a_1-1)\big]i && 
+\end{flalign*}
+\[y_{j+1} \in \bR \implies Im(y_{j+1}) = 0 \implies b_1(a_2-1) + b_2(a_1-1) = 0\]
+\[z_1+z_2 = h \in \bR \implies a_1+a_2 + (b_1+b_2)i = h \implies b_1+b_2 = 0 \implies b_1 = -b_2\]
+\[b_1(a_2-1) + b_2(a_1-1) = 0 \implies b_1(a_2-1) - b_1(a_1-1) = 0 \implies b_1 = 0 = b_2 \text{ or } a_1 = a_2\]
+Thus, $z_1, z_2 \in \bC \implies a_1 = a_2$ and $b_1 = -b_2$
+\[\therefore z_1 = a_1 + b_1i \text{ and } z_2 = a_1 - b_1i \implies z_2 = \bar{z_1} \qquad\square\]
+\end{theorem}
+\begin{multicols}{2}
+\begin{center}
+\includegraphics[width=0.49\textwidth]{Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png}
+\end{center}
+\columnbreak{}
+
+\textbf{Euler's Backward 2-Step $\bR$}
+\begin{flalign*}
+	y_{j+1} &= {\bigg(\frac{1}{1-\frac{\lh}{2}}\bigg)}^2 y_j && \\
+	\implies & s_{\bR}(\lambda, h) = \frac{1}{1 - \lh + \frac{{(\lh)}^2}{4}} &&
+\end{flalign*}
+
+\textbf{Euler's Backward 2-Step $\bC$}
+\begin{flalign*}
+	y_{j+1} &= \bigg(\frac{1}{1-\frac{\lh}{2}+bi}\bigg)\bigg(\frac{1}{1-\frac{\lh}{2}-bi}\bigg)y_j && \\
+    \implies &s_{\bC}(\lambda, h) = \frac{1}{1 - \lh + \frac{{(\lh)}^2}{4} + b^2} && \\
+\end{flalign*}
+
+\vspace*{\fill}
+\end{multicols}
+
+\par Again, $b \in \bR$, so this time, $s_{_{\mathbb{C}}}(\lambda, h) \leq s_{_{\mathbb{R}}}(\lambda, h) \implies S_{_{\mathbb{C}}}$ is larger than $S_{_{\mathbb{R}}}$\\
+\newpage
+\subsubsection{Runge-Kutta 4 2-Step}
+\begin{theorem}\textbf{Runge-Kutta 4 Complex Step Pairs must be Conjugate}\\
+\par For the exponential decay problem, $y=e^{\lambda t}$, let $\lambda \in \bR$\\
+Let $z_1 = a + bi$ and $z_2 = c + di$ be a complex step pair for Runge-Kutta 4 2-Step Method.\\
+Then we must have $z_2 = \bar{z_1}$\\
+\par\textbf{Proof:}\\
+This is merely the expansion of the RK4 stability equation \ldots\\
+Real: $1+\frac{a^{4} c^{4}}{576} + \frac{a^{4} c^{3}}{144} - \frac{a^{4} c^{2} d^{2}}{96} + \frac{a^{4} c^{2}}{48} - \frac{a^{4} c d^{2}}{48} + \frac{a^{4} c}{24} + \frac{a^{4} d^{4}}{576} - \frac{a^{4} d^{2}}{48} + \frac{a^{4}}{24} - \frac{a^{3} b c^{3} d}{36} - \frac{a^{3} b c^{2} d}{12} + \frac{a^{3} b c d^{3}}{36} - \frac{a^{3} b c d}{6} + \frac{a^{3} b d^{3}}{36} - \frac{a^{3} b d}{6} + \frac{a^{3} c^{4}}{144} + \frac{a^{3} c^{3}}{36} - \frac{a^{3} c^{2} d^{2}}{24} + \frac{a^{3} c^{2}}{12} - \frac{a^{3} c d^{2}}{12} + \frac{a^{3} c}{6} + \frac{a^{3} d^{4}}{144} - \frac{a^{3} d^{2}}{12} + \frac{a^{3}}{6} - \frac{a^{2} b^{2} c^{4}}{96} - \frac{a^{2} b^{2} c^{3}}{24} + \frac{a^{2} b^{2} c^{2} d^{2}}{16} - \frac{a^{2} b^{2} c^{2}}{8} + \frac{a^{2} b^{2} c d^{2}}{8} - \frac{a^{2} b^{2} c}{4} - \frac{a^{2} b^{2} d^{4}}{96} + \frac{a^{2} b^{2} d^{2}}{8} - \frac{a^{2} b^{2}}{4} - \frac{a^{2} b c^{3} d}{12} - \frac{a^{2} b c^{2} d}{4} + \frac{a^{2} b c d^{3}}{12} - \frac{a^{2} b c d}{2} + \frac{a^{2} b d^{3}}{12} - \frac{a^{2} b d}{2} + \frac{a^{2} c^{4}}{48} + \frac{a^{2} c^{3}}{12} - \frac{a^{2} c^{2} d^{2}}{8} + \frac{a^{2} c^{2}}{4} - \frac{a^{2} c d^{2}}{4} + \frac{a^{2} c}{2} + \frac{a^{2} d^{4}}{48} - \frac{a^{2} d^{2}}{4} + \frac{a^{2}}{2} + \frac{a b^{3} c^{3} d}{36} + \frac{a b^{3} c^{2} d}{12} - \frac{a b^{3} c d^{3}}{36} + \frac{a b^{3} c d}{6} - \frac{a b^{3} d^{3}}{36} + \frac{a b^{3} d}{6} - \frac{a b^{2} c^{4}}{48} - \frac{a b^{2} c^{3}}{12} + \frac{a b^{2} c^{2} d^{2}}{8} - \frac{a b^{2} c^{2}}{4} + \frac{a b^{2} c d^{2}}{4} - \frac{a b^{2} c}{2} - \frac{a b^{2} d^{4}}{48} + \frac{a b^{2} d^{2}}{4} - \frac{a b^{2}}{2} - \frac{a b c^{3} d}{6} - \frac{a b c^{2} d}{2} + \frac{a b c d^{3}}{6} - a b c d + \frac{a b d^{3}}{6} - a b d + \frac{a c^{4}}{24} + \frac{a c^{3}}{6} - \frac{a c^{2} d^{2}}{4} + \frac{a c^{2}}{2} - \frac{a c d^{2}}{2} + a c + \frac{a d^{4}}{24} - \frac{a d^{2}}{2} + a + \frac{b^{4} c^{4}}{576} + \frac{b^{4} c^{3}}{144} - \frac{b^{4} c^{2} d^{2}}{96} + \frac{b^{4} c^{2}}{48} - \frac{b^{4} c d^{2}}{48} + \frac{b^{4} c}{24} + \frac{b^{4} d^{4}}{576} - \frac{b^{4} d^{2}}{48} + \frac{b^{4}}{24} + \frac{b^{3} c^{3} d}{36} + \frac{b^{3} c^{2} d}{12} - \frac{b^{3} c d^{3}}{36} + \frac{b^{3} c d}{6} - \frac{b^{3} d^{3}}{36} + \frac{b^{3} d}{6} - \frac{b^{2} c^{4}}{48} - \frac{b^{2} c^{3}}{12} + \frac{b^{2} c^{2} d^{2}}{8} - \frac{b^{2} c^{2}}{4} + \frac{b^{2} c d^{2}}{4} - \frac{b^{2} c}{2} - \frac{b^{2} d^{4}}{48} + \frac{b^{2} d^{2}}{4} - \frac{b^{2}}{2} - \frac{b c^{3} d}{6} - \frac{b c^{2} d}{2} + \frac{b c d^{3}}{6} - b c d + \frac{b d^{3}}{6} - b d + \frac{c^{4}}{24} + \frac{c^{3}}{6} - \frac{c^{2} d^{2}}{4} + \frac{c^{2}}{2} - \frac{c d^{2}}{2} + c + \frac{d^{4}}{24} - \frac{d^{2}}{2}$\\
+Imaginary: $\frac{a^{4} c^{3} d}{144} + \frac{a^{4} c^{2} d}{48} - \frac{a^{4} c d^{3}}{144} + \frac{a^{4} c d}{24} - \frac{a^{4} d^{3}}{144} + \frac{a^{4} d}{24} + \frac{a^{3} b c^{4}}{144} + \frac{a^{3} b c^{3}}{36} - \frac{a^{3} b c^{2} d^{2}}{24} + \frac{a^{3} b c^{2}}{12} - \frac{a^{3} b c d^{2}}{12} + \frac{a^{3} b c}{6} + \frac{a^{3} b d^{4}}{144} - \frac{a^{3} b d^{2}}{12} + \frac{a^{3} b}{6} + \frac{a^{3} c^{3} d}{36} + \frac{a^{3} c^{2} d}{12} - \frac{a^{3} c d^{3}}{36} + \frac{a^{3} c d}{6} - \frac{a^{3} d^{3}}{36} + \frac{a^{3} d}{6} - \frac{a^{2} b^{2} c^{3} d}{24} - \frac{a^{2} b^{2} c^{2} d}{8} + \frac{a^{2} b^{2} c d^{3}}{24} - \frac{a^{2} b^{2} c d}{4} + \frac{a^{2} b^{2} d^{3}}{24} - \frac{a^{2} b^{2} d}{4} + \frac{a^{2} b c^{4}}{48} + \frac{a^{2} b c^{3}}{12} - \frac{a^{2} b c^{2} d^{2}}{8} + \frac{a^{2} b c^{2}}{4} - \frac{a^{2} b c d^{2}}{4} + \frac{a^{2} b c}{2} + \frac{a^{2} b d^{4}}{48} - \frac{a^{2} b d^{2}}{4} + \frac{a^{2} b}{2} + \frac{a^{2} c^{3} d}{12} + \frac{a^{2} c^{2} d}{4} - \frac{a^{2} c d^{3}}{12} + \frac{a^{2} c d}{2} - \frac{a^{2} d^{3}}{12} + \frac{a^{2} d}{2} - \frac{a b^{3} c^{4}}{144} - \frac{a b^{3} c^{3}}{36} + \frac{a b^{3} c^{2} d^{2}}{24} - \frac{a b^{3} c^{2}}{12} + \frac{a b^{3} c d^{2}}{12} - \frac{a b^{3} c}{6} - \frac{a b^{3} d^{4}}{144} + \frac{a b^{3} d^{2}}{12} - \frac{a b^{3}}{6} - \frac{a b^{2} c^{3} d}{12} - \frac{a b^{2} c^{2} d}{4} + \frac{a b^{2} c d^{3}}{12} - \frac{a b^{2} c d}{2} + \frac{a b^{2} d^{3}}{12} - \frac{a b^{2} d}{2} + \frac{a b c^{4}}{24} + \frac{a b c^{3}}{6} - \frac{a b c^{2} d^{2}}{4} + \frac{a b c^{2}}{2} - \frac{a b c d^{2}}{2} + a b c + \frac{a b d^{4}}{24} - \frac{a b d^{2}}{2} + a b + \frac{a c^{3} d}{6} + \frac{a c^{2} d}{2} - \frac{a c d^{3}}{6} + a c d - \frac{a d^{3}}{6} + a d + \frac{b^{4} c^{3} d}{144} + \frac{b^{4} c^{2} d}{48} - \frac{b^{4} c d^{3}}{144} + \frac{b^{4} c d}{24} - \frac{b^{4} d^{3}}{144} + \frac{b^{4} d}{24} - \frac{b^{3} c^{4}}{144} - \frac{b^{3} c^{3}}{36} + \frac{b^{3} c^{2} d^{2}}{24} - \frac{b^{3} c^{2}}{12} + \frac{b^{3} c d^{2}}{12} - \frac{b^{3} c}{6} - \frac{b^{3} d^{4}}{144} + \frac{b^{3} d^{2}}{12} - \frac{b^{3}}{6} - \frac{b^{2} c^{3} d}{12} - \frac{b^{2} c^{2} d}{4} + \frac{b^{2} c d^{3}}{12} - \frac{b^{2} c d}{2} + \frac{b^{2} d^{3}}{12} - \frac{b^{2} d}{2} + \frac{b c^{4}}{24} + \frac{b c^{3}}{6} - \frac{b c^{2} d^{2}}{4} + \frac{b c^{2}}{2} - \frac{b c d^{2}}{2} + b c + \frac{b d^{4}}{24} - \frac{b d^{2}}{2} + b + \frac{c^{3} d}{6} + \frac{c^{2} d}{2} - \frac{c d^{3}}{6} + c d - \frac{d^{3}}{6} + d$
+\end{theorem}
+\begin{multicols}{2}
+\begin{center}
+\includegraphics[width=0.49\textwidth]{Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png}
+\end{center}
+\columnbreak{}
+
+\textbf{Runge-Kutta 4 2-Step $\bR$}
+\begin{flalign*} 
+	y_{j+1} &= {\bigg(1+\frac{\lh}{2}+\frac{{(\frac{\lh}{2})}^2}{2}+\frac{{(\frac{\lh}{2})}^3}{6}+\frac{{(\frac{\lh}{2})}^4}{24}\bigg)}^2 y_j && \\
+	y_{j+1} &= \bigg(1+\lh+\frac{{(\lh)}^2}{2}+\frac{{(\lh)}^3}{6}+\frac{{(\lh)}^4}{24} && \\
+            &\quad\,\,\,\,+\frac{{(\lh)}^5}{128}+\frac{5{(\lh)}^6}{4608}+\frac{{(\lh)}^7}{9216}+\frac{{(\lh)}^8}{147456}\bigg) y_j && \\
+	\implies &s_{_{\bR}}(\lambda, h) = 1+\lh+\frac{{(\lh)}^2}{2}+\frac{{(\lh)}^3}{6}+\frac{{(\lh)}^4}{24} && \\
+            &\qquad\qquad\quad+\frac{{(\lh)}^5}{128}+\frac{5{(\lh)}^6}{4608}+\frac{{(\lh)}^7}{9216}+\frac{{(\lh)}^8}{147456} &&
+\end{flalign*}
+
+\textbf{Runge-Kutta 4 2-Step $\bC$}
+\[y_{j+1} = \bigg(1+z+\frac{z^2}{2}+\frac{z^3}{6}+\frac{z^4}{24}\bigg)\bigg(1+\bar{z}+\frac{\bar{z}^2}{2}+\frac{\bar{z}^3}{6}+\frac{\bar{z}^4}{24}\bigg) y_j\]
+
+\end{multicols}
+$\implies s_{_{\bC}}(\lambda, h) = 1 + \lh + \frac{\lh^2}{2} + \frac{\lh^3}{6} + \frac{\lh^4}{24} + \frac{\lh^5}{128} + \frac{5 \lh^6}{4608} + \frac{\lh^7}{9216} + \frac{\lh^8}{147456} + \frac{b^2 \lh^3}{48} + \frac{b^2 \lh^4}{128} + \frac{b^2 \lh^5}{768} + \frac{b^2 \lh^6}{9216} + \frac{b^4 \lh}{24} - \frac{b^4 \lh^2}{96} + \frac{b^4 \lh^3}{192} + \frac{b^4 \lh^4}{1536} - \frac{b^6}{72} + \frac{b^6 \lh}{144} + \frac{b^6 \lh^2}{576} + \frac{b^8}{576}$
+
+\subsection{Varying b for Complex Conjugate Step Pairs}
+\par As mentioned earlier, we need not only focus on the case where $b = \frac{\lh}{2}$\\
+We can vary $b$ and see how the stability regions change.\\
+In the cases below, we have preserved $a = \frac{\lh}{2}$\\
+Consequently, these are still complex conjugate step pairs.\\
+Videos showing the stability regions for varying $b$ values can be found in the \textit{GitHub Repository}\cite{GitHub_Repo} for this project.\\
+Below are some of the video frames for each method.\\
+\textbf{Observations:}
+\begin{itemize}
+	\item[$\cdot$] The stability region for complex conjugate pairs is always symmetric accross the real axis.\\
+	      
+	\item[$\cdot$] As $b$ increases, the stability region shrinks.\\
+	      This can be seen quite simply in the $s_{_{\bC}}(\lambda, h)$ equation for Euler's Forward and Backward methods.\\
+\end{itemize}
+\subsubsection{Euler's Forward}
+\begin{multicols}{3}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0200.png}
+	\end{center}
+	\columnbreak{}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0350.png}
+	\end{center}
+	\columnbreak{}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0500.png}
+	\end{center}
+\end{multicols}
+\subsubsection{Euler's Backward}
+\begin{multicols}{3}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0200.png}
+	\end{center}
+	\columnbreak{}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0350.png}
+	\end{center}
+	\columnbreak{}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0500.png}
+	\end{center}
+\end{multicols}
+\subsubsection{Runga-Kutta 4}
+\begin{multicols}{3}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0200.png}
+	\end{center}
+	\columnbreak{}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0350.png}
+	\end{center}
+	\columnbreak{}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0500.png}
+	\end{center}
+\end{multicols}
+
+\subsection{Varying a}
+\par We can also vary $a$ and see how the stability regions change.\\
+This falls outside the scope of complex conjugate step pairs.\\
+In the cases below, we have set $b = \frac{\lh}{2}$\\
+Videos showing the stability regions for varying $a$ values can be found in the \textit{GitHub Repository}\cite{GitHub_Repo} for this project.\\
+Below are some of the video frames for each method.\\
+\textbf{Observations:}
+\begin{itemize}
+	\item[$\cdot$] The stability region for varying $a$ values is not symmetric accross the real axis, except for the case where $a = 0.5$.
+	\item[$\cdot$] The stability regions for $a = 0.5 \pm \alpha$ are symmetric accross the real axis for any $|\alpha| < 0.5$.
+	\item[$\cdot$] The stability region for Euler's Backward Method is the inverse of that for Euler's Forward Method, after it has been reflected across the imaginary axis.
+\end{itemize}
+\subsubsection{Euler's Forward}
+\begin{multicols}{3}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied a/Euler's Forward/b=0.5/frames/0200.png}
+	\end{center}
+	\columnbreak{}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied a/Euler's Forward/b=0.5/frames/0500.png}
+	\end{center}
+	\columnbreak{}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied a/Euler's Forward/b=0.5/frames/0800.png}
+	\end{center}
+\end{multicols}
+\subsubsection{Euler's Backward}
+\begin{multicols}{3}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied a/Euler's Backward/b=0.5/frames/0200.png}
+	\end{center}
+	\columnbreak{}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied a/Euler's Backward/b=0.5/frames/0500.png}
+	\end{center}
+	\columnbreak{}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied a/Euler's Backward/b=0.5/frames/0800.png}
+	\end{center}
+\end{multicols}
+\subsubsection{Runga-Kutta 4}
+\begin{multicols}{3}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied a/Runge-Kutta 4/b=0.5/frames/0350.png}
+	\end{center}
+	\columnbreak{}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied a/Runge-Kutta 4/b=0.5/frames/0500.png}
+	\end{center}
+	\columnbreak{}
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied a/Runge-Kutta 4/b=0.5/frames/0650.png}
+	\end{center}
+\end{multicols}
+
