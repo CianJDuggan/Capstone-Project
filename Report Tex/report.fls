@@ -319,19 +319,24 @@ INPUT ./Section 1: Introduction.tex
 INPUT ./Section 1: Introduction.tex
 INPUT Section 1: Introduction.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
-INPUT /usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT ./Section 2: Definitions and Concepts.tex
 INPUT ./Section 2: Definitions and Concepts.tex
 INPUT Section 2: Definitions and Concepts.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT ./Section 3: Stability Analysis.tex
-INPUT ./Section 3: Stability Analysis.tex
-INPUT Section 3: Stability Analysis.tex
+INPUT ./Section 3: Exponential Decay.tex
+INPUT ./Section 3: Exponential Decay.tex
+INPUT Section 3: Exponential Decay.tex
 INPUT ../Graphs/Exponential Decay/Exact with -1.png
 INPUT ../Graphs/Exponential Decay/Exact with -1.png
 INPUT ../Graphs/Exponential Decay/Exact with -1.png
 INPUT ../Graphs/Exponential Decay/Exact with -1.png
+INPUT ../Graphs/Exponential Decay/Exact with (-0.2+5j).png
+INPUT ../Graphs/Exponential Decay/Exact with (-0.2+5j).png
+INPUT ../Graphs/Exponential Decay/Exact with (-0.2+5j).png
+INPUT ../Graphs/Exponential Decay/Exact with (-0.2+5j).png
+INPUT ./Section 4: Stability Analysis.tex
+INPUT ./Section 4: Stability Analysis.tex
+INPUT Section 4: Stability Analysis.tex
 INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png
 INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png
 INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Euler's Forward.png
@@ -344,9 +349,57 @@ INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png
 INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png
 INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png
 INPUT ../Graphs/Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png
-INPUT ./Section 4: Complex Time-Steps.tex
-INPUT ./Section 4: Complex Time-Steps.tex
-INPUT Section 4: Complex Time-Steps.tex
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Forward real-real.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Forward real-real.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Forward real-real.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Forward real-real.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Forward real-imag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Forward real-imag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Forward real-imag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Forward real-imag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Forward real-mag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Forward real-mag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Forward real-mag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Forward real-mag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Forward complex.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Forward complex.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Forward complex.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Forward complex.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Backward real-real.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Backward real-real.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Backward real-real.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Backward real-real.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Backward real-imag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Backward real-imag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Backward real-imag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Backward real-imag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Backward real-mag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Backward real-mag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Backward real-mag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Backward real-mag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Backward complex.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Backward complex.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Backward complex.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Euler's Backward complex.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Runge-Kutta 4 real-real.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Runge-Kutta 4 real-real.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Runge-Kutta 4 real-real.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Runge-Kutta 4 real-real.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Runge-Kutta 4 real-imag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Runge-Kutta 4 real-imag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Runge-Kutta 4 real-imag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Runge-Kutta 4 real-imag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Runge-Kutta 4 real-mag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Runge-Kutta 4 real-mag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Runge-Kutta 4 real-mag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Runge-Kutta 4 real-mag.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Runge-Kutta 4 complex.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Runge-Kutta 4 complex.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Runge-Kutta 4 complex.png
+INPUT ../Graphs/Exponential Decay/Exact vs Method/Runge-Kutta 4 complex.png
+INPUT ./Section 5: Complex Time-Steps.tex
+INPUT ./Section 5: Complex Time-Steps.tex
+INPUT Section 5: Complex Time-Steps.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
@@ -446,7 +499,6 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
@@ -460,4 +512,3 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb
