@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
@@ -91,9 +92,9 @@ def plot_Region(stability_function, grid, points):
     # Legend with "Real" and "Complex" labels in colors matching the plot
     plt.legend(labels=['Real', 'Complex'], labelcolor=[colors[3], colors[6]], fontsize=15*grid_scale, loc='upper right', facecolor='white', edgecolor='black', handletextpad=0, handlelength=0)
 
+    relative_path = os.path.join('..', '..', 'Graphs',  'Stability Regions', 'Graphs', 'Real VS Complex Comparison', f'{name}.png')
+    plt.savefig(relative_path, bbox_inches='tight', pad_inches=0)
 
-    # Save plot as a frame
-    plt.savefig(f'/home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real VS Complex Comparison/{name}.png', bbox_inches='tight', pad_inches=0)
     plt.show()
 
 plot_Region(EB, 20, 2**13)

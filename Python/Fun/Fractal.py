@@ -60,7 +60,6 @@ def plot_stability_region(stability, grid, points, cmap):
     plt.xlabel('$Real$')
     plt.ylabel('$Imaginary$')
     
-    plt.savefig(f'/home/puca/University/Senior Sophister/Capstone/Graphs/Fun/{name}.png')
     plt.show()
 
 # Iterate through each function in Functions

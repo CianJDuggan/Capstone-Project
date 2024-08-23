@@ -1,5 +1,5 @@
-import imageio.v2 as imageio
 import os
+import imageio.v2 as imageio
 
 EF = "Euler's Forward"
 EB = "Euler's Backward"
@@ -9,9 +9,12 @@ method = RK4
 varied = "Varied b"
 const = "a=0.5"
 
-# Define the frames directory and the output video path
-frames_dir = f'/home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Videos/{varied}/{method}/{const}/frames'
-output_video_path = f'/home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Videos/{varied}/{method}/{const}/video.mp4'
+# Define the base path using relative paths
+base_path = os.path.join('..', '..', '..', 'Graphs', 'Stability Regions', 'Videos')
+
+# Define the frames directory and the output video path using relative paths
+frames_dir = os.path.join(base_path, varied, method, const, 'frames')
+output_video_path = os.path.join(base_path, varied, method, const, 'video.mp4')
 
 # Ensure the frames directory exists
 if not os.path.exists(frames_dir):

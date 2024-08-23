@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
@@ -7,7 +8,7 @@ colors = cmap(np.linspace(0, 1, 10))
 
 def plot_exponential_function(domain, grid, h, lam):
     x = grid/2
-    t = np.arange(-x, x, 1/1000)
+    t = np.arange(0, x, 1/1000)
 
     y = np.exp(lam * t)
     
@@ -35,7 +36,7 @@ def plot_exponential_function(domain, grid, h, lam):
 
 
     elif domain == 'complex':
-        fig = plt.figure(figsize=(grid, x), facecolor='white', edgecolor='black')
+        fig = plt.figure(figsize=(10, 10), facecolor='white', edgecolor='black')
         ax = fig.add_subplot(111, projection='3d', facecolor='white')
         ax.view_init(elev=22.5, azim=315, roll=0)
         ax.plot(t, y.real, y.imag, color=colors[3], linewidth=1.5)
@@ -64,22 +65,16 @@ def plot_exponential_function(domain, grid, h, lam):
         ax.zaxis._axinfo['tick']['inward_factor'] = 0
         ax.zaxis._axinfo['tick']['outward_factor'] = 0
 
-        # Set equal aspect ratio for all axes
-        max_range = np.array([t.max()-t.min(), y.real.max()-y.real.min(), y.imag.max()-y.imag.min()]).max() / 2.0
-        mid_x = (t.max()+t.min()) * 0.5
-        mid_y = (y.real.max()+y.real.min()) * 0.5
-        mid_z = (y.imag.max()+y.imag.min()) * 0.5
-        ax.set_xlim(mid_x - max_range, mid_x + max_range)
-        ax.set_ylim(mid_y - max_range, mid_y + max_range)
-        ax.set_zlim(mid_z - max_range, mid_z + max_range)
+        # Set ranges for axes
+        ax.set_xlim([t.min(), t.max()])
+        ax.set_ylim([y.real.min(), y.real.max()])
+        ax.set_zlim([y.imag.min(), y.imag.max()])
 
         # Set ticks to create square grid boxes
-        tick_spacing = 4
-        axes_min = np.array([t.min(), y.real.min(), y.imag.min()]).min()
-        axes_max = np.array([t.max(), y.real.max(), y.imag.max()]).max()
-        ax.set_xticks(np.arange(np.floor(axes_min), np.ceil(axes_max) + 1, tick_spacing))
-        ax.set_yticks(np.arange(np.floor(axes_min), np.ceil(axes_max) + 1, tick_spacing))
-        ax.set_zticks(np.arange(np.floor(axes_min), np.ceil(axes_max) + 1, tick_spacing))
+        tick_space = 4
+        ax.set_xticks(np.arange(t.min(), t.max() + 1, (np.ceil(t.max()) - np.floor(t.min()))/tick_space))
+        ax.set_yticks(np.arange(np.floor(y.real.min()), np.ceil(y.real.max()), (np.ceil(y.real.max()) - np.floor(y.real.min()))/tick_space))
+        ax.set_zticks(np.arange(np.floor(y.imag.min()), np.ceil(y.imag.max()), (np.ceil(y.imag.max()) - np.floor(y.imag.min()))/tick_space))
 
         # Ensure grid lines are drawn on all planes
         ax.grid(True)
@@ -87,10 +82,13 @@ def plot_exponential_function(domain, grid, h, lam):
         ax.xaxis._axinfo["grid"].update({"color": "black", "linewidth": 0.5})
         ax.yaxis._axinfo["grid"].update({"color": "black", "linewidth": 0.5})
         ax.zaxis._axinfo["grid"].update({"color": "black", "linewidth": 0.5})
+    
+    # Define output path
+    relative_path = os.path.join('..', 'Graphs', 'Exponential Decay', f'Exact with {lam}.png')
 
-    plt.savefig(f'/home/puca/University/Senior Sophister/Capstone/Graphs/Exponential Decay/Exact with {lam}.png', bbox_inches='tight', pad_inches=0)
+    plt.savefig(relative_path, bbox_inches='tight', pad_inches=0)
     plt.show()
 
 
-plot_exponential_function(domain = 'complex', grid = 15, h = 1/5, lam = -0.2+5j)
 #plot_exponential_function(domain = 'real', grid = 10, h = 1/5, lam = -1)
+plot_exponential_function(domain = 'complex', grid = 20, h = 1/5, lam = -0.3+5j)

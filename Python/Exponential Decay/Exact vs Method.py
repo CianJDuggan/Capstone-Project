@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
@@ -7,25 +8,30 @@ colors = cmap(np.linspace(0, 1, 10))
 background = 'white'
 foreground = 'black'
 
-EF = ["Euler's Forward", lambda l, h: (l*h) + 1 +0j]
-EB = ["Euler's Backward", lambda l, h: 1/(1 - (l*h)) + 0j]
-RK4 = ["Runge-Kutta 4", lambda l, h: ((l*h)**4)/24 + ((l*h)**3)/6 + ((l*h)**2)/2 + (l*h) + 1 +0j]
+EF = ["Euler's Forward", lambda l, h: (l*h) + 1]
+EB = ["Euler's Backward", lambda l, h: 1/(1 - (l*h))]
+RK4 = ["Runge-Kutta 4", lambda l, h: ((l*h)**4)/24 + ((l*h)**3)/6 + ((l*h)**2)/2 + (l*h) + 1]
 
-def plot_exponential_function(domain, grid, h_val, h_inval, lam, method, pos, real_component):
+def plot_exponential_function(domain, grid, h_stable, h_unstable, lam, method, pos, red_width):
     # Size and time steps
     t = np.arange(0, grid, 1/1000)
 
-    # Exact
+    ## Exact ##
     y = np.exp(lam * t)
-    # Method
-    t_steps_val = np.arange(0, grid, h_val)
-    y_steps_val = method[1](lam, h_val) ** t_steps_val
-    y_method_val = np.interp(t, t_steps_val, y_steps_val)
-    # Inval
-    t_steps_inval = np.arange(0, grid, h_inval)
-    y_steps_inval = (method[1](lam, h_inval) ** t_steps_inval)
-    y_method_inval = np.interp(t, t_steps_inval, y_steps_inval)
     
+    ## Method ##
+    
+    # Stable
+    t_steps_stable = np.arange(0, grid+1, 1)
+    y_steps_stable = method[1](lam, h_stable) ** t_steps_stable
+    y_method_stable = np.interp(t, t_steps_stable, y_steps_stable)
+    
+    # Unstable
+    t_steps_unstable = np.arange(0, grid+1, 1)
+    y_steps_unstable = (method[1](lam, h_unstable) ** t_steps_unstable)
+    y_method_unstable = np.interp(t, t_steps_unstable, y_steps_unstable)
+    
+    ## Plot ##
     if domain == 'real':
         # Instantiate the graph
         plt.figure(figsize=(10, 10), facecolor=background, edgecolor=foreground)
@@ -34,29 +40,12 @@ def plot_exponential_function(domain, grid, h_val, h_inval, lam, method, pos, re
         # Exact
         ax.plot(t, y, color=foreground)
         
-        # Method
-        if real_component == 'real':
-            y_points_val = y_steps_val.real
-            y_line_val = y_method_val.real
-            y_points_inval = y_steps_inval.real
-            y_line_inval = y_method_inval.real
-        elif real_component == 'imag':
-            y_points_val = y_steps_val.imag
-            y_line_val = y_method_val.imag
-            y_points_inval = y_steps_inval.imag
-            y_line_inval = y_method_inval.imag
-        elif real_component == 'mag':
-            y_points_val = np.abs(y_steps_val)
-            y_line_val = np.interp(t, t_steps_val, y_points_val)
-            y_points_inval = np.abs(y_steps_inval)
-            y_line_inval = np.interp(t, t_steps_inval, y_points_inval)
-        
-        # Valid
-        ax.plot(t, y_line_val, color='green', linestyle='--')
-        ax.plot(t_steps_val, y_points_val, color='green', marker='o', markersize=5, linestyle='none')
-        # Invalid
-        ax.plot(t, y_line_inval, color='red', linestyle='--')
-        ax.plot(t_steps_inval, y_points_inval, color='red', marker='o', markersize=5, linestyle='none')
+        # Stable
+        ax.plot(t, y_method_stable, color='green', linestyle='--')
+        ax.plot(t_steps_stable, y_steps_stable, color='green', marker='o', markersize=5, linestyle='none')
+        # Unstable
+        ax.plot(t, y_method_unstable, color='red', linestyle='--')
+        ax.plot(t_steps_unstable, y_steps_unstable, color='red', marker='o', markersize=5, linestyle='none')
 
         # Graph settings
         ax.set_ylabel('$y$', color=foreground, fontsize=15)
@@ -72,10 +61,9 @@ def plot_exponential_function(domain, grid, h_val, h_inval, lam, method, pos, re
         plt.xticks(np.arange(0, grid+1, 1), fontsize=15, color=foreground)
         plt.yticks(np.arange(-(grid/4), (grid/4)+1, 1), fontsize=15, color=foreground)
         ax.set_xlabel('$t$', color=foreground, fontsize=15)
-        h_val = round(h_val, 3)
-        h_inval = round(h_inval, 3)
-        plt.legend(labels=[r'$\lambda = {}$'.format(lam), r'$h = {}$'.format(h_val), r'$h = {}$'.format(h_inval) ], labelcolor=[foreground, 'green', 'red'], facecolor=background, edgecolor=foreground, fontsize=15, loc='upper right', handletextpad=0, handlelength=0, markerscale=0)
-        plt.savefig(f'/home/puca/University/Senior Sophister/Capstone/Graphs/Exponential Decay/Exact vs Method/{method[0]} {domain}-{real_component}.png', bbox_inches='tight', pad_inches=0)
+        h_stable = round(h_stable, 3)
+        h_unstable = round(h_unstable, 3)
+        plt.legend(labels=[r'$\lambda = {}$'.format(lam), r'$h = {}$'.format(h_stable), r'$h = {}$'.format(h_unstable) ], labelcolor=[foreground, 'green', 'red'], facecolor=background, edgecolor=foreground, fontsize=15, loc='upper right', handletextpad=0, handlelength=0, markerscale=0)
 
 
 
@@ -88,17 +76,17 @@ def plot_exponential_function(domain, grid, h_val, h_inval, lam, method, pos, re
         # Exact
         ax.plot(t, y.real, y.imag, color=foreground, linewidth=1.5)
         # Valid
-        ax.plot(t, y_method_val.real, y_method_val.imag, color='green', linewidth=2)
-        #ax.plot(t_steps_val, y_steps_val.real, y_steps_val.imag, color='green', marker='o', markersize=1)
-        # Inval
-        ax.plot(t, y_method_inval.real, y_method_inval.imag, color='red', linewidth=0.5)
-        #ax.plot(t_steps_inval, y_steps_inval.real, y_steps_inval.imag, color='red', marker='o', markersize=1)
+        ax.plot(t, y_method_stable.real, y_method_stable.imag, color='green', linewidth=2)
+        #ax.plot(t_steps_stable, y_steps_stable.real, y_steps_stable.imag, color='green', marker='o', markersize=1)
+        # Instable
+        ax.plot(t, y_method_unstable.real, y_method_unstable.imag, color='red', linewidth=red_width)
+        #ax.plot(t_steps_unstable, y_steps_unstable.real, y_steps_unstable.imag, color='red', marker='o', markersize=1)
 
         # Graph settings
         ax.set_xlabel('$t$', color=foreground)
         ax.set_ylabel('$Re(y)$', color=foreground)
         ax.set_zlabel('$Im(y)$', color=foreground)
-        plt.legend(labels=[r'$\lambda = {}$'.format(lam), r'$h = {}$'.format(h_val), r'$h = {}$'.format(h_inval) ], labelcolor=[foreground, 'green', 'red'], facecolor=background, edgecolor=foreground, fontsize=15, loc=(pos[0], pos[1]), handletextpad=0, handlelength=0, framealpha=1)
+        plt.legend(labels=[r'$\lambda = {}$'.format(lam), r'$h = {}$'.format(h_stable), r'$h = {}$'.format(h_unstable) ], labelcolor=[foreground, 'green', 'red'], facecolor=background, edgecolor=foreground, fontsize=15, loc=(pos[0], pos[1]), handletextpad=0, handlelength=0, framealpha=1)
         ax.xaxis.set_pane_color(background)
         ax.yaxis.set_pane_color(background)
         ax.zaxis.set_pane_color(background)
@@ -117,12 +105,12 @@ def plot_exponential_function(domain, grid, h_val, h_inval, lam, method, pos, re
 
         ax.set_xlim(t.min(), t.max())
 
-        y_real_max = max(y.real.max(), y_method_val.real.max(), y_method_inval.real.max())
-        y_real_min = min(y.real.min(), y_method_val.real.min(), y_method_inval.real.min())
+        y_real_max = max(y.real.max(), y_method_stable.real.max(), y_method_unstable.real.max())
+        y_real_min = min(y.real.min(), y_method_stable.real.min(), y_method_unstable.real.min())
         ax.set_ylim(y_real_min, y_real_max)
 
-        y_imag_max = max(y.imag.max(), y_method_val.imag.max(), y_method_inval.imag.max())
-        y_imag_min = min(y.imag.min(), y_method_val.imag.min(), y_method_inval.imag.min())
+        y_imag_max = max(y.imag.max(), y_method_stable.imag.max(), y_method_unstable.imag.max())
+        y_imag_min = min(y.imag.min(), y_method_stable.imag.min(), y_method_unstable.imag.min())
         ax.set_zlim(y_imag_min, y_imag_max)
 
         ax.set_xticks(np.arange(np.floor(t.min()), np.ceil(t.max()) + 1, grid/5))
@@ -134,25 +122,26 @@ def plot_exponential_function(domain, grid, h_val, h_inval, lam, method, pos, re
         ax.xaxis._axinfo["grid"].update({"color": foreground, "linewidth": 0.5})
         ax.yaxis._axinfo["grid"].update({"color": foreground, "linewidth": 0.5})
         ax.zaxis._axinfo["grid"].update({"color": foreground, "linewidth": 0.5})
-        plt.savefig(f'/home/puca/University/Senior Sophister/Capstone/Graphs/Exponential Decay/Exact vs Method/{method[0]} {domain}.png', bbox_inches='tight', pad_inches=0)
-
+    
+    relative_path = os.path.join('..', '..', 'Graphs', 'Exponential Decay', 'Exact vs Method', f'{method[0]} {domain}.png')
+    plt.savefig(relative_path, bbox_inches='tight', pad_inches=0)
 
     plt.show()
 
 # Euler's Forward
 # Real
-#plot_exponential_function(domain = 'real', grid = 10, h_val = 1/6, h_inval = 5/12, lam = -5, method = EF, pos = [0, 0], real_component = 'mag')
+#plot_exponential_function(domain = 'real', grid = 10, h_stable = 1/6, h_unstable = 5/12, lam = -5, method = EF, pos = [0, 0], red_width = 2)
 # Complex
-#plot_exponential_function(domain = 'complex', grid = 300, h_val = 0.03, h_inval = 0.05, lam = -0.5+5j, method = EF, pos = [0.2, 0.3], real_component = 'mag')
+#plot_exponential_function(domain = 'complex', grid = 300, h_stable = 0.03, h_unstable = 0.05, lam = -0.5+5j, method = EF, pos = [0.1, 0.3], red_width = 2)
 
 # Euler's Backward
 # Real
-#plot_exponential_function(domain = 'real', grid = 10, h_val = 1/6, h_inval = 5/12, lam = -5, method = EB, pos = [0, 0], real_component = 'mag')
+#plot_exponential_function(domain = 'real', grid = 10, h_stable = 1/6, h_unstable = 5/12, lam = -5, method = EB, pos = [0, 0], red_width = 2)
 # Complex
-#plot_exponential_function(domain = 'complex', grid = 300, h_val = 0.03, h_inval = 0.05, lam = -0.5+5j, method = EB, pos = [0.4, 0.2], real_component = 'mag')
+#plot_exponential_function(domain = 'complex', grid = 300, h_stable = 0.03, h_unstable = 0.05, lam = -0.5+5j, method = EB, pos = [0.4, 0.2], red_width = 2)
 
 # Runge-Kutta 4
 # Real
-#plot_exponential_function(domain = 'real', grid = 10, h_val = 0.5, h_inval = 0.57, lam = -5, method = RK4, pos = [0, 0], real_component = 'real')
+#plot_exponential_function(domain = 'real', grid = 10, h_stable = 0.5, h_unstable = 0.57, lam = -5, method = RK4, pos = [0, 0], red_width = 2)
 # Complex
-plot_exponential_function(domain = 'complex', grid = 300, h_val = 0.03, h_inval = 0.5875, lam = -0.5+5j, method = RK4, pos = [0.4, 0.2], real_component = 'mag')
+plot_exponential_function(domain = 'complex', grid = 300, h_stable = 0.03, h_unstable = 0.5875, lam = -0.5+5j, method = RK4, pos = [0.4, 0.2], red_width = 0.5)

@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
@@ -78,7 +79,8 @@ def plot_Region(stability_function, grid, points):
     plt.legend(labels=['$z_1 = -2$', '$z_2 = -1 + i$', '$z_3 = -1 - 3i$'], labelcolor=[colors[2], colors[4], colors[7]], fontsize=15, loc='upper right', facecolor='white', edgecolor='black', handletextpad=0, handlelength=0, markerscale=0)
 
 
-    plt.savefig(f'/home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Graphs/Real 1-Step lambda values/{name}.png')
+    #relative_path = os.path.join('..', '..', 'Graphs',  'Stability Regions', 'Graphs', 'Real 1-Step lambda values', f'{name}.png')
+    #plt.savefig(relative_path, bbox_inches='tight', pad_inches=0)
     plt.show()
 
 # Iterate through each function in Functions
