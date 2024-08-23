@@ -1,0 +1,60 @@
+\section{Appendix}
+\subsection{Numerical Method: 2-step Abysmal Kramer-Butler Method}
+A look was taken beyond 1-step numerical methods.\\
+The 2-step Abysmal Kramer-Butler~\cite{abysmal} method was designed to be unstable for the sake of demonstration.\\
+The algorithm is as follows:
+\[y_{j+1} = y_{j-1} + h(4\phi(t_j,y_j)-2\phi(t_{j-1},y_{j-1}))\]
+As we know the exact solution to our Exponential Decay problem is $y(t) = e^{\lambda t}$, we know $\phi(t,y) = \lambda y$.\\
+This gives:\\
+\[y_{j+1} = y_{j-1} + h(4\lambda y_j - 2\lambda y_{j-1})\]
+Simplified:\\
+\[y_{j+1} = 4\lh y_j + (1-2\lh) y_{j-1}\]
+We need this in the form $y_{j+1} = s(\lambda h)y_j$ to find the stability region.\\
+The author could not manage this.\\
+If this is your poison, good luck.\\
+
+\subsection{Runge-Kutta 4 Complex Step Pairs must be Conjugate for $\lambda \in \bR$}
+Here follows the expansion of $s(z_1, h)s(z_2, h)$ for Runge-Kutta 4 with complex step pairs $z_1 = a + bi$ and $z_2 = c + di$:\\
+Real: $1+\frac{a^{4} c^{4}}{576} + \frac{a^{4} c^{3}}{144} - \frac{a^{4} c^{2} d^{2}}{96} + \frac{a^{4} c^{2}}{48} - \frac{a^{4} c d^{2}}{48} + \frac{a^{4} c}{24} + \frac{a^{4} d^{4}}{576} - \frac{a^{4} d^{2}}{48} + \frac{a^{4}}{24} - \frac{a^{3} b c^{3} d}{36} - \frac{a^{3} b c^{2} d}{12} + \frac{a^{3} b c d^{3}}{36} - \frac{a^{3} b c d}{6} + \frac{a^{3} b d^{3}}{36} - \frac{a^{3} b d}{6} + \frac{a^{3} c^{4}}{144} + \frac{a^{3} c^{3}}{36} - \frac{a^{3} c^{2} d^{2}}{24} + \frac{a^{3} c^{2}}{12} - \frac{a^{3} c d^{2}}{12} + \frac{a^{3} c}{6} + \frac{a^{3} d^{4}}{144} - \frac{a^{3} d^{2}}{12} + \frac{a^{3}}{6} - \frac{a^{2} b^{2} c^{4}}{96} - \frac{a^{2} b^{2} c^{3}}{24} + \frac{a^{2} b^{2} c^{2} d^{2}}{16} - \frac{a^{2} b^{2} c^{2}}{8} + \frac{a^{2} b^{2} c d^{2}}{8} - \frac{a^{2} b^{2} c}{4} - \frac{a^{2} b^{2} d^{4}}{96} + \frac{a^{2} b^{2} d^{2}}{8} - \frac{a^{2} b^{2}}{4} - \frac{a^{2} b c^{3} d}{12} - \frac{a^{2} b c^{2} d}{4} + \frac{a^{2} b c d^{3}}{12} - \frac{a^{2} b c d}{2} + \frac{a^{2} b d^{3}}{12} - \frac{a^{2} b d}{2} + \frac{a^{2} c^{4}}{48} + \frac{a^{2} c^{3}}{12} - \frac{a^{2} c^{2} d^{2}}{8} + \frac{a^{2} c^{2}}{4} - \frac{a^{2} c d^{2}}{4} + \frac{a^{2} c}{2} + \frac{a^{2} d^{4}}{48} - \frac{a^{2} d^{2}}{4} + \frac{a^{2}}{2} + \frac{a b^{3} c^{3} d}{36} + \frac{a b^{3} c^{2} d}{12} - \frac{a b^{3} c d^{3}}{36} + \frac{a b^{3} c d}{6} - \frac{a b^{3} d^{3}}{36} + \frac{a b^{3} d}{6} - \frac{a b^{2} c^{4}}{48} - \frac{a b^{2} c^{3}}{12} + \frac{a b^{2} c^{2} d^{2}}{8} - \frac{a b^{2} c^{2}}{4} + \frac{a b^{2} c d^{2}}{4} - \frac{a b^{2} c}{2} - \frac{a b^{2} d^{4}}{48} + \frac{a b^{2} d^{2}}{4} - \frac{a b^{2}}{2} - \frac{a b c^{3} d}{6} - \frac{a b c^{2} d}{2} + \frac{a b c d^{3}}{6} - a b c d + \frac{a b d^{3}}{6} - a b d + \frac{a c^{4}}{24} + \frac{a c^{3}}{6} - \frac{a c^{2} d^{2}}{4} + \frac{a c^{2}}{2} - \frac{a c d^{2}}{2} + a c + \frac{a d^{4}}{24} - \frac{a d^{2}}{2} + a + \frac{b^{4} c^{4}}{576} + \frac{b^{4} c^{3}}{144} - \frac{b^{4} c^{2} d^{2}}{96} + \frac{b^{4} c^{2}}{48} - \frac{b^{4} c d^{2}}{48} + \frac{b^{4} c}{24} + \frac{b^{4} d^{4}}{576} - \frac{b^{4} d^{2}}{48} + \frac{b^{4}}{24} + \frac{b^{3} c^{3} d}{36} + \frac{b^{3} c^{2} d}{12} - \frac{b^{3} c d^{3}}{36} + \frac{b^{3} c d}{6} - \frac{b^{3} d^{3}}{36} + \frac{b^{3} d}{6} - \frac{b^{2} c^{4}}{48} - \frac{b^{2} c^{3}}{12} + \frac{b^{2} c^{2} d^{2}}{8} - \frac{b^{2} c^{2}}{4} + \frac{b^{2} c d^{2}}{4} - \frac{b^{2} c}{2} - \frac{b^{2} d^{4}}{48} + \frac{b^{2} d^{2}}{4} - \frac{b^{2}}{2} - \frac{b c^{3} d}{6} - \frac{b c^{2} d}{2} + \frac{b c d^{3}}{6} - b c d + \frac{b d^{3}}{6} - b d + \frac{c^{4}}{24} + \frac{c^{3}}{6} - \frac{c^{2} d^{2}}{4} + \frac{c^{2}}{2} - \frac{c d^{2}}{2} + c + \frac{d^{4}}{24} - \frac{d^{2}}{2}$\\
+Imaginary: $\frac{a^{4} c^{3} d}{144} + \frac{a^{4} c^{2} d}{48} - \frac{a^{4} c d^{3}}{144} + \frac{a^{4} c d}{24} - \frac{a^{4} d^{3}}{144} + \frac{a^{4} d}{24} + \frac{a^{3} b c^{4}}{144} + \frac{a^{3} b c^{3}}{36} - \frac{a^{3} b c^{2} d^{2}}{24} + \frac{a^{3} b c^{2}}{12} - \frac{a^{3} b c d^{2}}{12} + \frac{a^{3} b c}{6} + \frac{a^{3} b d^{4}}{144} - \frac{a^{3} b d^{2}}{12} + \frac{a^{3} b}{6} + \frac{a^{3} c^{3} d}{36} + \frac{a^{3} c^{2} d}{12} - \frac{a^{3} c d^{3}}{36} + \frac{a^{3} c d}{6} - \frac{a^{3} d^{3}}{36} + \frac{a^{3} d}{6} - \frac{a^{2} b^{2} c^{3} d}{24} - \frac{a^{2} b^{2} c^{2} d}{8} + \frac{a^{2} b^{2} c d^{3}}{24} - \frac{a^{2} b^{2} c d}{4} + \frac{a^{2} b^{2} d^{3}}{24} - \frac{a^{2} b^{2} d}{4} + \frac{a^{2} b c^{4}}{48} + \frac{a^{2} b c^{3}}{12} - \frac{a^{2} b c^{2} d^{2}}{8} + \frac{a^{2} b c^{2}}{4} - \frac{a^{2} b c d^{2}}{4} + \frac{a^{2} b c}{2} + \frac{a^{2} b d^{4}}{48} - \frac{a^{2} b d^{2}}{4} + \frac{a^{2} b}{2} + \frac{a^{2} c^{3} d}{12} + \frac{a^{2} c^{2} d}{4} - \frac{a^{2} c d^{3}}{12} + \frac{a^{2} c d}{2} - \frac{a^{2} d^{3}}{12} + \frac{a^{2} d}{2} - \frac{a b^{3} c^{4}}{144} - \frac{a b^{3} c^{3}}{36} + \frac{a b^{3} c^{2} d^{2}}{24} - \frac{a b^{3} c^{2}}{12} + \frac{a b^{3} c d^{2}}{12} - \frac{a b^{3} c}{6} - \frac{a b^{3} d^{4}}{144} + \frac{a b^{3} d^{2}}{12} - \frac{a b^{3}}{6} - \frac{a b^{2} c^{3} d}{12} - \frac{a b^{2} c^{2} d}{4} + \frac{a b^{2} c d^{3}}{12} - \frac{a b^{2} c d}{2} + \frac{a b^{2} d^{3}}{12} - \frac{a b^{2} d}{2} + \frac{a b c^{4}}{24} + \frac{a b c^{3}}{6} - \frac{a b c^{2} d^{2}}{4} + \frac{a b c^{2}}{2} - \frac{a b c d^{2}}{2} + a b c + \frac{a b d^{4}}{24} - \frac{a b d^{2}}{2} + a b + \frac{a c^{3} d}{6} + \frac{a c^{2} d}{2} - \frac{a c d^{3}}{6} + a c d - \frac{a d^{3}}{6} + a d + \frac{b^{4} c^{3} d}{144} + \frac{b^{4} c^{2} d}{48} - \frac{b^{4} c d^{3}}{144} + \frac{b^{4} c d}{24} - \frac{b^{4} d^{3}}{144} + \frac{b^{4} d}{24} - \frac{b^{3} c^{4}}{144} - \frac{b^{3} c^{3}}{36} + \frac{b^{3} c^{2} d^{2}}{24} - \frac{b^{3} c^{2}}{12} + \frac{b^{3} c d^{2}}{12} - \frac{b^{3} c}{6} - \frac{b^{3} d^{4}}{144} + \frac{b^{3} d^{2}}{12} - \frac{b^{3}}{6} - \frac{b^{2} c^{3} d}{12} - \frac{b^{2} c^{2} d}{4} + \frac{b^{2} c d^{3}}{12} - \frac{b^{2} c d}{2} + \frac{b^{2} d^{3}}{12} - \frac{b^{2} d}{2} + \frac{b c^{4}}{24} + \frac{b c^{3}}{6} - \frac{b c^{2} d^{2}}{4} + \frac{b c^{2}}{2} - \frac{b c d^{2}}{2} + b c + \frac{b d^{4}}{24} - \frac{b d^{2}}{2} + b + \frac{c^{3} d}{6} + \frac{c^{2} d}{2} - \frac{c d^{3}}{6} + c d - \frac{d^{3}}{6} + d$\\
+\subsection{Code}
+\subsubsection{Exact Solution for Exponential Decay}
+Found at `/Python/Exponential Decay/Exact.py' in the repository~\cite{GitHub_Repo}.
+\lstinputlisting[language=Python]{../Python/Exponential Decay/Exact.py}
+\newpage
+\subsubsection{Basic Stability Regions}
+Found at `/Python/Stability Regions/Graphs/Basic.py' in the repository~\cite{GitHub_Repo}.
+\lstinputlisting[language=Python]{../Python/Stability Regions/Graphs/Basic.py}
+\newpage
+\subsubsection{Exact vs Methods}
+Found at `/Python/Exponential Decay/Exact Vs Method.py' in the repository~\cite{GitHub_Repo}.
+\lstinputlisting[language=Python]{../Python/Exponential Decay/Exact Vs Method.py}
+\newpage
+\subsubsection{Stability Magnitude 3D}
+Found at `/Python/Stability Magnitude/Stability Magnitude 3D.py' in the repository~\cite{GitHub_Repo}.
+\lstinputlisting[language=Python]{../Python/Stability Magnitude/Stability Magnitude 3D.py}
+\newpage
+\subsubsection{Stability Magnitude Contour}
+Found at `/Python/Stability Magnitude/Stability Magnitude Color.py' in the repository~\cite{GitHub_Repo}.
+\lstinputlisting[language=Python]{../Python/Stability Magnitude/Stability Magnitude Color.py}
+\newpage
+\subsubsection{Stability Magnitude Solutions}
+Found at `/Python/Stability Magnitude/Exponential Decay.py' in the repository~\cite{GitHub_Repo}.
+\lstinputlisting[language=Python]{../Python/Stability Magnitude/Exponential Decay.py}
+\newpage
+\subsubsection{Finding $h$ for $|s_{RK4}| = \lh$ when given $\lambda$}
+Found at `/Python/Stability Magnitude/Rk4 = c.py' in the repository~\cite{GitHub_Repo}.
+\lstinputlisting[language=Python]{../Python/Stability Magnitude/Rk4 = c.py}
+\newpage
+\subsubsection{Real VS Complex Stability Regions}
+Found at `/Python/Stability Regions/Graphs/Real vs Complex Comparison.py' in the repository~\cite{GitHub_Repo}.
+\lstinputlisting[language=Python]{../Python/Stability Regions/Graphs/Real vs Complex Comparison.py}
+\newpage
+\subsubsection{Video Frame Generation}
+Found at `/Python/Stability Regions/Videos/Complex Pairs Video Frames.py' in the repository~\cite{GitHub_Repo}.
+\lstinputlisting[language=Python]{../Python/Stability Regions/Videos/Complex Pairs Video Frames.py}
+\newpage
+\subsubsection{Frame Stitching for Video}
+Found at `/Python/Stability Regions/Videos/Frames-to-Video.py' in the repository~\cite{GitHub_Repo}.
+\lstinputlisting[language=Python]{../Python/Stability Regions/Videos/Frames-to-Video.py}
+\newpage
