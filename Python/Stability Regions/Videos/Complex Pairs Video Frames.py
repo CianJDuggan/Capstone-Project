@@ -1,8 +1,8 @@
+import os
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter as formatter
-import os
 
 cmap = mpl.colormaps['magma_r']
 # Take colors at regular intervals spanning the colormap
@@ -103,6 +103,15 @@ def plot_Region(stability_function, grid, points, aORb, frame_number):
 
 
     # Save plot as a frame
+    relative_path = os.path.join('..', '..', '..', 'Graphs',  'Stability Regions', 'Videos')
+    video_path = os.path.join(subdir, name, f"{const}={const_val}", 'frames')
+    output_path = os.path.join(relative_path, video_path)
+    if not os.path.exists(output_path):
+        os.makedirs(output_path)
+    frame_path = f'{frame_number:04d}.png'
+    path = os.path.join(output_path, frame_path)
+    plt.savefig(path, bbox_inches='tight', pad_inches=0)
+
     output_dir = f'/home/puca/University/Senior Sophister/Capstone/Graphs/Stability Regions/Videos/{subdir}/{name}/{const}={const_val}/frames'
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
