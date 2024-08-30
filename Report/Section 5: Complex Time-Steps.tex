@@ -82,6 +82,7 @@ Thus, $z_1, z_2 \in \bC \implies a_1 = a_2$ and $b_1 = -b_2$
 \begin{multicols}{2}
 \begin{center}
 \includegraphics[width=0.49\textwidth]{Stability Regions/Graphs/Real VS Complex Comparison/Euler's Forward.png}
+Appendix~\ref{appendix:real_vs_complex_stability} contains the code for this graph.
 \end{center}
 \columnbreak{}
 
@@ -143,6 +144,7 @@ Thus, $z_1, z_2 \in \bC \implies a_1 = a_2$ and $b_1 = -b_2$
 \begin{multicols}{2}
 \begin{center}
 \includegraphics[width=0.49\textwidth]{Stability Regions/Graphs/Real VS Complex Comparison/Euler's Backward.png}
+Appendix~\ref{appendix:real_vs_complex_stability} contains the code for this graph.
 \end{center}
 \columnbreak{}
 
@@ -157,21 +159,23 @@ Thus, $z_1, z_2 \in \bC \implies a_1 = a_2$ and $b_1 = -b_2$
 	y_{j+1} &= \bigg(\frac{1}{1-\frac{\lh}{2}+bi}\bigg)\bigg(\frac{1}{1-\frac{\lh}{2}-bi}\bigg)y_j && \\
     \implies &s_{\bC}(\lambda, h) = \frac{1}{1 - \lh + \frac{{(\lh)}^2}{4} + b^2} && \\
 \end{flalign*}
-
+\par Again, $b \in \bR$, so this time,\\
+$s_{_{\mathbb{C}}}(\lambda, h) \leq s_{_{\mathbb{R}}}(\lambda, h) \implies S_{_{\mathbb{C}}}$ is larger than $S_{_{\mathbb{R}}}$\\
 \vspace*{\fill}
 \end{multicols}
 
-\par Again, $b \in \bR$, so this time, $s_{_{\mathbb{C}}}(\lambda, h) \leq s_{_{\mathbb{R}}}(\lambda, h) \implies S_{_{\mathbb{C}}}$ is larger than $S_{_{\mathbb{R}}}$\\
 \newpage
 \subsubsection{Runge-Kutta 4 2-Step}
 \begin{conjecture}\textbf{Runge-Kutta 4 Complex Step Pairs must be Conjugate for $\lambda \in \bR$}\\
 	\par This is left as a conjecture for now, as the expansion we did in the other two proofs is much more complicated for the Runge-Kutta 4 method.\\
 	The proof is left as an exercise in futility for the reader.\\
-	Have a look at Appendix A for the full expansion of the stability function for the Runge-Kutta 4 method, if long algebraic expressions are your flavour of masochism.\\
+	Have a look at Appendix~\ref{appendix:rk4_conjecture} for the full expansion of the stability function for the Runge-Kutta 4 method,\\
+	if long algebraic expressions are your flavour of masochism.\\
 \end{conjecture}
 \begin{multicols}{2}
 \begin{center}
 \includegraphics[width=0.49\textwidth]{Stability Regions/Graphs/Real VS Complex Comparison/Runge-Kutta 4.png}
+Appendix~\ref{appendix:real_vs_complex_stability} contains the code for this graph.
 \end{center}
 \columnbreak{}
 
@@ -189,22 +193,28 @@ Thus, $z_1, z_2 \in \bC \implies a_1 = a_2$ and $b_1 = -b_2$
 
 \end{multicols}
 $\implies s_{_{\bC}}(\lambda, h) = 1 + \lh + \frac{\lh^2}{2} + \frac{\lh^3}{6} + \frac{\lh^4}{24} + \frac{\lh^5}{128} + \frac{5 \lh^6}{4608} + \frac{\lh^7}{9216} + \frac{\lh^8}{147456} + \frac{b^2 \lh^3}{48} + \frac{b^2 \lh^4}{128} + \frac{b^2 \lh^5}{768} + \frac{b^2 \lh^6}{9216} + \frac{b^4 \lh}{24} - \frac{b^4 \lh^2}{96} + \frac{b^4 \lh^3}{192} + \frac{b^4 \lh^4}{1536} - \frac{b^6}{72} + \frac{b^6 \lh}{144} + \frac{b^6 \lh^2}{576} + \frac{b^8}{576}$
-
+\newpage
 \subsection{Varying b for Complex Conjugate Step Pairs}
 \par As mentioned earlier, we need not only focus on the case where $b = \frac{\lh}{2}$\\
 We can vary $b$ and see how the stability regions change.\\
 In the cases below, we have preserved $a = \frac{\lh}{2}$\\
 Consequently, these are still complex conjugate step pairs.\\
 Videos showing the stability regions for varying $b$ values can be found in the \textit{GitHub Repository}\cite{GitHub_Repo} for this project.\\
+These videos were created frame-by-frame using the script in Appendix~\ref{appendix:video_frames}.\\
+The frames were stiched together using the script in Appendix~\ref{appendix:frames_to_video}.\\
 Below are some of the video frames for each method.\\
 \textbf{Observations:}
 \begin{itemize}
 	\item[$\cdot$] The stability region for complex conjugate pairs is always symmetric accross the real axis.
 	      
-	\item[$\cdot$] As $b$ increases, the stability region shrinks.\\
-	      This can be seen quite simply in the $s_{_{\bC}}(\lambda, h)$ equation for Euler's Forward and Backward methods.
+	\item[$\cdot$] As $b$ increases, the stability region shrinks for explicit methods and grows for implicit methods.\\
+        This can be seen quite simply in the $s_{_{\bC}}(\lambda, h)$ equations for Euler's Forward and Backward methods.
+
+        \item[$\cdot$] The stability region for Euler's Backward Method is the complement of that for Euler's Forward Method, after it has been reflected across the imaginary axis.
+
 \end{itemize}
 \subsubsection{Euler's Forward}
+\vspace*{-0.65cm}
 \begin{multicols}{3}
 	\begin{center}
 		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Euler's Forward/a=0.5/frames/0200.png}
@@ -219,6 +229,7 @@ Below are some of the video frames for each method.\\
 	\end{center}
 \end{multicols}
 \subsubsection{Euler's Backward}
+\vspace*{-0.65cm}
 \begin{multicols}{3}
 	\begin{center}
 		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Euler's Backward/a=0.5/frames/0200.png}
@@ -233,6 +244,7 @@ Below are some of the video frames for each method.\\
 	\end{center}
 \end{multicols}
 \subsubsection{Runga-Kutta 4}
+\vspace*{-0.65cm}
 \begin{multicols}{3}
 	\begin{center}
 		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0200.png}
@@ -246,21 +258,25 @@ Below are some of the video frames for each method.\\
 		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied b/Runge-Kutta 4/a=0.5/frames/0500.png}
 	\end{center}
 \end{multicols}
-
+\newpage
 \subsection{Varying a}
 \par We can also vary $a$ and see how the stability regions change.\\
 This falls outside the scope of complex conjugate step pairs.\\
 Consequently, these stability regions can only be interpreted for $\lambda \in \bC\setminus\bR$ (If you believe Conjecture 1).\\
 In the cases below, we have set $b = \frac{\lh}{2}$\\
 Videos showing the stability regions for varying $a$ values can be found in the \textit{GitHub Repository}\cite{GitHub_Repo} for this project.\\
+The same process was followed as in the previous section:\\
+The videos were created frame-by-frame using the script in Appendix~\ref{appendix:video_frames}.\\
+The frames were stiched together using the script in Appendix~\ref{appendix:frames_to_video}.\\
 Below are some of the video frames for each method.\\
 \textbf{Observations:}
 \begin{itemize}
 	\item[$\cdot$] The stability region for varying $a$ values is not symmetric across the real axis, except for the case where $a = 0.5$.
 	\item[$\cdot$] The stability regions for $a = 0.5 \pm \alpha$ are symmetric to each other across the real axis for any $|\alpha| < 0.5$.
-	\item[$\cdot$] The stability region for Euler's Backward Method is the inverse of that for Euler's Forward Method, after it has been reflected across the imaginary axis.
+	\item[$\cdot$] The stability region for Euler's Backward Method is the complement of that for Euler's Forward Method, after it has been reflected across the imaginary axis.
 \end{itemize}
 \subsubsection{Euler's Forward}
+\vspace*{-0.65cm}
 \begin{multicols}{3}
 	\begin{center}
 		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied a/Euler's Forward/b=0.5/frames/0200.png}
@@ -275,6 +291,7 @@ Below are some of the video frames for each method.\\
 	\end{center}
 \end{multicols}
 \subsubsection{Euler's Backward}
+\vspace*{-0.65cm}
 \begin{multicols}{3}
 	\begin{center}
 		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied a/Euler's Backward/b=0.5/frames/0200.png}
@@ -289,6 +306,7 @@ Below are some of the video frames for each method.\\
 	\end{center}
 \end{multicols}
 \subsubsection{Runga-Kutta 4}
+\vspace*{-0.65cm}
 \begin{multicols}{3}
 	\begin{center}
 		\includegraphics[width=0.32\textwidth]{Stability Regions/Videos/Varied a/Runge-Kutta 4/b=0.5/frames/0350.png}

@@ -68,6 +68,7 @@ This aligns with our intuition for the problem;
 \vspace*{\fill}
 \begin{center}
 \includegraphics[width=0.49\textwidth]{Stability Regions/Graphs/Real 1-Step/Euler's Forward.png}
+See Appendix~\ref{appendix:basic} for the graphing code.\\
 \end{center}
 \vspace*{\fill}
 \end{multicols}
@@ -81,6 +82,7 @@ This is also intuitive; if we imagine $\lambda$ growing linearly, $h$ must shrin
 \vspace*{\fill}
 \begin{center}
 \includegraphics[width=0.49\textwidth]{Stability Regions/Graphs/Real 1-Step/Euler's Backward.png}
+See Appendix~\ref{appendix:basic} for the graphing code.\\
 \end{center}
 \vspace*{\fill}
 \columnbreak{}
@@ -94,7 +96,7 @@ The corresponding stability region is
 This is plotted in red on the left; the region outside a unit circle centred at $1$.\\
 The white region of instability is exactly the stability region for Euler's Forward Method, flipped about Imaginary axis.\\
 
-\par We could run through the same algebraic proceedure as before, expanding $\lambda$ and rearranging, and we would find that 
+\par We could run through the same algebraic procedure as before, expanding $\lambda$ and rearranging, and we would find that 
 \[h > \frac{2 Re(\lambda)}{{|\lambda|}^2}\]
 \end{multicols}
 This is a more lax restriction than the $0<h$ that we have already established.\\
@@ -124,9 +126,11 @@ The corresponding stability region is
 \columnbreak{}
 \begin{center}
 \includegraphics[width=0.49\textwidth]{Stability Regions/Graphs/Real 1-Step/Runge-Kutta 4.png}
+See Appendix~\ref{appendix:basic} for the graphing code.\\
 \end{center}
 \end{multicols}
 
+\newpage
 \subsection{Interpretation of Stability Regions}
 
 \par The stability region $S = \Big\{ (\lambda, h) \;\Big|\; |s(\lambda, h)| < 1\Big\} \in \bC$ is a set of values for which a numerical method is stable for the Exponential Decay Problem.\\
@@ -146,8 +150,8 @@ the same as we introduced for the Exponential Decay Problem.\\
 In black is the exact solution. In colour are the numerical solutions due to the method in question.\\
 These $(\lambda, h)$ pairs were found by first picking a value of $\lambda$ and then finding $h$ values which met the stability condition.\\
 In green $(\lambda, h) \in S$.\\
-In red $(\lambda, h) \notin S$.
-\newpage
+In red $(\lambda, h) \notin S$.\\
+Appendix~\ref{appendix:exact_vs_methods} has the code for all graphs in this section.\\
 \subsubsection{Euler's Forward Method}
 \begin{multicols}{2}
 	\begin{center}
@@ -173,11 +177,10 @@ In red $(\lambda, h) \notin S$.
         
         \par While this 3D graph might not be the clearest, it took quite a lot of messing with values of $h$ and $\lambda$ to find one so demonstrative.\\
 	The reader is encouraged to play with values for $h$ and $\lambda$ in \\
-	`/Python/Exponential Decay/Exact vs Method.py'\\
-	of the GitHub repository~\cite{GitHub_Repo} to see for themselves.\\
+	Appendix~\ref{appendix:exact_vs_methods} to see for themselves.\\
 	This has the added benefit of allowing you to rotate the graph to see the behaviour from different angles.
 \end{multicols}
-
+\newpage
 \subsubsection{Euler's Backward Method}
 \begin{multicols}{2}
 	As mentioned before, Euler's Backward Method is A-Stable.\\
@@ -198,16 +201,19 @@ In red $(\lambda, h) \notin S$.
 	Interestingly, the method converges faster for the larger step size.\\
 	The subsequent section on Stability Magnitudes will explain this behaviour.
 \end{multicols}
-\newpage
 \subsubsection{Runge-Kutta 4}
 \begin{multicols}{2}
 	The same properties hold true for Runge-Kutta 4, as we demonstrated for Euler's Forward, though we choose different values of $h$ and $\lambda$ for aesthetic clarity.\\
-	\vspace*{2cm}
+	It was particularly to find a set of values that demonstrated both convergence and divergence, while keeping the exact solution visible.\\
+	The lineweight of the unstable $h$ method was decreased to keep everything clear.\\
+	\begin{center}
 	\includegraphics[width=0.49\textwidth]{Exponential Decay/Exact vs Method/Runge-Kutta 4 real.png}
+        \end{center}
 \columnbreak{}
-\begin{center}
+	\vspace*{-1.5cm}
+	\begin{center}
 	\includegraphics[width=0.49\textwidth]{Exponential Decay/Exact vs Method/Runge-Kutta 4 complex.png}
-\end{center}
+	\end{center}
 \end{multicols}
 \newpage
 \subsection{Stability Magnitudes}
@@ -221,8 +227,9 @@ The magnitudes have been projected down onto the base plane as colour plots.\\
 We show these colour plots separately in the second graphs.\\
 While on the first graphs, these colour gradients are continuous, on the second graphs we have discretised them.\\
 This is so that for the third graphs we can create a correspondance with the plotted numerical solutions.\\
-We'll only present the Exponential Decay graphs for real $\lambda$ here, as the complex $\lambda$ graphs are, well, complex. No need to spiral out of control.\\
+We'll only present the Exponential Decay graphs for real $\lambda$ here, as the complex $\lambda$ graphs are quite cluttered.\\
 Their behavior is the same as for the real $\lambda$ graphs, with tighter, faster decaying spirals as $\lh$ lands in brighter areas of the colour plot.\\
+See Appendicies~\ref{appendix:stability_magnitude_3d},~\ref{appendix:stability_magnitude_contour} and~\ref{appendix:stability_magnitude_solutions} for the python used to generate graphs 1, 2 and 3 respectively.\\
 \subsubsection{Euler's Forward Method}
 \begin{multicols}{2}
 	\begin{center}
@@ -286,5 +293,5 @@ Their behavior is the same as for the real $\lambda$ graphs, with tighter, faste
 	\columnbreak{}
 	The same general observations as Euler's Forward Method hold true for Runge-Kutta 4.\\
 	The values of $h$ here were calculated numerically, rather than algebraically.\\
-	Check out `/Python/Stability Magnitude/Rk4 = c.py' in the GitHub repository~\cite{GitHub_Repo} for the code.\\
+	The code for calculating these values can be found at Appendix~\ref{appendix:rk4_h}.\\
 \end{multicols}

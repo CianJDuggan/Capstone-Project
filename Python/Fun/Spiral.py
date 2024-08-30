@@ -3,10 +3,11 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 phi = 1.618033988749895
-lam = (-0.1 + 4j) * phi
+pi = 3.14159265358979323846264338327950288419716939937
+lam = (-1 + 10j) * phi/2*pi
 
 def plot_exponential_function_3d(l):
-    t = np.linspace(0, 30, 1000)
+    t = np.linspace(0, 10, 10000)
     y = np.exp(l * t)
 
     fig = plt.figure(figsize=(10, 10))

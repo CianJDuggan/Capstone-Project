@@ -15,9 +15,9 @@
 \contentsline {subsubsection}{\numberline {4.3.1}Stability Region for Euler's Forward Method}{6}{subsubsection.4.3.1}%
 \contentsline {subsubsection}{\numberline {4.3.2}Stability Region for Euler's Backward Method}{6}{subsubsection.4.3.2}%
 \contentsline {subsubsection}{\numberline {4.3.3}Stability Region for Runge-Kutta 4}{7}{subsubsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.4}Interpretation of Stability Regions}{7}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.4}Interpretation of Stability Regions}{8}{subsection.4.4}%
 \contentsline {subsubsection}{\numberline {4.4.1}Euler's Forward Method}{8}{subsubsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.2}Euler's Backward Method}{8}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2}Euler's Backward Method}{9}{subsubsection.4.4.2}%
 \contentsline {subsubsection}{\numberline {4.4.3}Runge-Kutta 4}{9}{subsubsection.4.4.3}%
 \contentsline {subsection}{\numberline {4.5}Stability Magnitudes}{10}{subsection.4.5}%
 \contentsline {subsubsection}{\numberline {4.5.1}Euler's Forward Method}{10}{subsubsection.4.5.1}%
@@ -30,25 +30,31 @@
 \contentsline {subsubsection}{\numberline {5.3.1}Euler's Forward 2-Step}{14}{subsubsection.5.3.1}%
 \contentsline {subsubsection}{\numberline {5.3.2}Euler's Backward 2-Step}{15}{subsubsection.5.3.2}%
 \contentsline {subsubsection}{\numberline {5.3.3}Runge-Kutta 4 2-Step}{16}{subsubsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.4}Varying b for Complex Conjugate Step Pairs}{16}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Euler's Forward}{16}{subsubsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4}Varying b for Complex Conjugate Step Pairs}{17}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Euler's Forward}{17}{subsubsection.5.4.1}%
 \contentsline {subsubsection}{\numberline {5.4.2}Euler's Backward}{17}{subsubsection.5.4.2}%
 \contentsline {subsubsection}{\numberline {5.4.3}Runga-Kutta 4}{17}{subsubsection.5.4.3}%
-\contentsline {subsection}{\numberline {5.5}Varying a}{17}{subsection.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.1}Euler's Forward}{17}{subsubsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5}Varying a}{18}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}Euler's Forward}{18}{subsubsection.5.5.1}%
 \contentsline {subsubsection}{\numberline {5.5.2}Euler's Backward}{18}{subsubsection.5.5.2}%
 \contentsline {subsubsection}{\numberline {5.5.3}Runga-Kutta 4}{18}{subsubsection.5.5.3}%
-\contentsline {section}{\numberline {6}Appendix}{20}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Numerical Method: 2-step Abysmal Kramer-Butler Method}{20}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Runge-Kutta 4 Complex Step Pairs must be Conjugate for $\lambda \in \ensuremath {\mathbb {R}}\xspace $}{20}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Code}{20}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Exact Solution for Exponential Decay}{20}{subsubsection.6.3.1}%
-\contentsline {subsubsection}{\numberline {6.3.2}Basic Stability Regions}{23}{subsubsection.6.3.2}%
-\contentsline {subsubsection}{\numberline {6.3.3}Exact vs Methods}{25}{subsubsection.6.3.3}%
-\contentsline {subsubsection}{\numberline {6.3.4}Stability Magnitude 3D}{28}{subsubsection.6.3.4}%
-\contentsline {subsubsection}{\numberline {6.3.5}Stability Magnitude Contour}{30}{subsubsection.6.3.5}%
-\contentsline {subsubsection}{\numberline {6.3.6}Stability Magnitude Solutions}{32}{subsubsection.6.3.6}%
-\contentsline {subsubsection}{\numberline {6.3.7}Finding $h$ for $|s_{RK4}| = \lambda h$ when given $\lambda $}{34}{subsubsection.6.3.7}%
-\contentsline {subsubsection}{\numberline {6.3.8}Real VS Complex Stability Regions}{35}{subsubsection.6.3.8}%
-\contentsline {subsubsection}{\numberline {6.3.9}Video Frame Generation}{37}{subsubsection.6.3.9}%
-\contentsline {subsubsection}{\numberline {6.3.10}Frame Stitching for Video}{39}{subsubsection.6.3.10}%
+\contentsline {section}{\numberline {6}Conclusions}{19}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Summary}{19}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Personal Reflection}{19}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Future Work}{19}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Acknowledgements}{19}{subsection.6.4}%
+\contentsline {section}{Appendices}{22}{section*.3}%
+\contentsline {section}{\numberline {A}Additional Explorations}{22}{appendix.1.A}%
+\contentsline {subsection}{\numberline {A.1}Numerical Method: 2-step Abysmal Kramer-Butler Method}{22}{subsection.1.A.1}%
+\contentsline {subsection}{\numberline {A.2}Runge-Kutta 4 Complex Step Pairs Conjecture}{22}{subsection.1.A.2}%
+\contentsline {section}{\numberline {B}Code}{22}{appendix.1.B}%
+\contentsline {subsection}{\numberline {B.1}Exact Solution for Exponential Decay}{22}{subsection.1.B.1}%
+\contentsline {subsection}{\numberline {B.2}Basic Stability Regions}{25}{subsection.1.B.2}%
+\contentsline {subsection}{\numberline {B.3}Exact vs Methods}{27}{subsection.1.B.3}%
+\contentsline {subsection}{\numberline {B.4}Stability Magnitude 3D}{30}{subsection.1.B.4}%
+\contentsline {subsection}{\numberline {B.5}Stability Magnitude Contour}{32}{subsection.1.B.5}%
+\contentsline {subsection}{\numberline {B.6}Stability Magnitude Solutions}{34}{subsection.1.B.6}%
+\contentsline {subsection}{\numberline {B.7}Runge-Kutta 4 Stability Magnitude}{36}{subsection.1.B.7}%
+\contentsline {subsection}{\numberline {B.8}Real VS Complex Stability Regions}{37}{subsection.1.B.8}%
+\contentsline {subsection}{\numberline {B.9}Video Frame Generation}{39}{subsection.1.B.9}%
+\contentsline {subsection}{\numberline {B.10}Frame Stitching for Video}{41}{subsection.1.B.10}%
