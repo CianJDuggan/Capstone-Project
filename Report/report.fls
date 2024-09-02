@@ -240,6 +240,8 @@ INPUT /usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/share/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/share/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/share/texmf-dist/tex/latex/appendix/appendix.sty
+INPUT /usr/share/texmf-dist/tex/latex/appendix/appendix.sty
 INPUT ./commands.tex
 INPUT ./commands.tex
 INPUT commands.tex
@@ -510,21 +512,26 @@ INPUT ../Graphs/Stability Regions/Videos/Varied a/Runge-Kutta 4/b=0.5/frames/065
 INPUT ../Graphs/Stability Regions/Videos/Varied a/Runge-Kutta 4/b=0.5/frames/0650.png
 INPUT ../Graphs/Stability Regions/Videos/Varied a/Runge-Kutta 4/b=0.5/frames/0650.png
 INPUT ../Graphs/Stability Regions/Videos/Varied a/Runge-Kutta 4/b=0.5/frames/0650.png
+INPUT ./Section 6: Conclusions.tex
+INPUT ./Section 6: Conclusions.tex
+INPUT Section 6: Conclusions.tex
+INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
+INPUT /usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT ./Bibliography.tex
 INPUT ./Bibliography.tex
 INPUT Bibliography.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
-INPUT ./Section X: Appendix.tex
-INPUT ./Section X: Appendix.tex
-INPUT Section X: Appendix.tex
+INPUT ./Appendix.tex
+INPUT ./Appendix.tex
+INPUT Appendix.tex
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT ../Python/Exponential Decay/Exact.py
 INPUT ../Python/Exponential Decay/Exact.py
 INPUT ../Python/Exponential Decay/Exact.py
-INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
-INPUT /usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcti1000.tfm
 INPUT /usr/share/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/share/texmf-dist/tex/latex/base/omscmr.fd
@@ -567,7 +574,6 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb

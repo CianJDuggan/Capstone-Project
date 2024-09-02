@@ -1,0 +1,67 @@
+\section{Conclusions}
+
+\subsection{Summary}
+\par In this paper, we explored the stability of numerical methods.\\
+We saw that the stability is a crucial property that determines the utility of a numerical method.\\
+We outlined the method for isolating the stability function of a numerical method.\\
+We established the concept of a stability region as the set of pairs $(\lambda, h)$ for which the numerical method is stable, and interpreted this set as a subset of the complex plane.\\
+We interpreted this region for different numerical methods, showing how methods converge to the exact solution for pairs landing within, and diverge for pairs landing outside.\\
+
+\par We also had a look at the use of complex time steps for various numerical methods.\\
+We analysed the behaviour of stability regions for different complex time steps.\\
+We saw evidence that the stability region shrinks as the error decreases.\\
+We also saw that the stability region is not always symmetric about the real axis.\\
+
+\subsection{Personal Reflection}
+\par With this project I undertook a few personal challenges.\\
+I succeeded in most with the following outcomes:\\
+\begin{itemize}
+    \item I have learned the tricks of graphing in python, and become more appreciative of the language overall.
+    \item I have figured out methods for making graphical videos, and have learned how to use them to illustrate mathematical concepts.
+    \item I have refined my use of LaTeX, and learned how to use it for more complex documents.
+    \item I have expanded my knowledge of numerical methods, and have a better understanding of the importance of stability.
+    \item I have stitched together knowledge from various modules, and applied it to a single project.
+    \item I have developed a greater appreciation for the mathematics researcher, and the work that goes into a single paper.
+    \item I have learned the basics of working with GitHub. Hello, world. Watch out, world.
+\end{itemize}
+
+\subsection{Future Work}
+\par There are a few areas that could be expanded upon in future work.\\
+
+\par The python written for this project could be compiled into a package for use by others.\\
+This would allow for the easy generation of stability region graphs for various numerical methods.\\
+With the addition of a few more functions, this could be made as easy as entering the equation of the method.\\
+This could be extended to include more numerical methods and toy problems.\\
+It may be particularly useful and intuition building to plot regions of valid $h$ for a given $\lambda$, or vice versa.\\
+
+
+\par It would be interesting to explore the stability of more complicated numerical methods.\\
+For example, the stability of multi-step methods.\\
+A small exploration of this was attempted during the project, but didn't go very far.\\
+Have a look at Appendix~\ref{appendix:abysmal} for more information.\\
+
+\par The paper by \textit{George, Yung and Mangan}\cite{walking_into_the_complex_domain} looked beyond 2-step complex paths to multi-step paths.\\
+For example, a 3-step path comprised of substeps complex-real-complex adding to an overall real step of size $h$.\\
+This could be explored further, and the stability regions for these paths could be analysed.\\
+This of course means that the complexity of the stability equation would grow quickly with the number of intermittent steps.\\
+
+
+\subsection{Acknowledgements}
+\par Thank you to Dr.~Kirk Soodhalter for taking an extra student under his wing, halfway through an academic year, and reworking a nightmare project into an enjoyable one.\\
+Without your patience and guidance, this project would not have been possible.\\
+Thank you for nurturing my curiosity and for continually challenging me to think deeper.\\
+
+\par Thank you to Dr.~Nicolas Mascot for helping a lost sheep to find a new shepherd, for organising the transfer of supervision, the rescheduling of deadlines, and for being so understanding.\\
+
+\par Thank you to all of my lecturers and tutors in the Department of Mathematics at Trinity College Dublin, for providing me with the tools and knowledge to undertake this project, and ultimately, my degree.\\
+
+\par Thank you to my partner, who used my ramblings as her nightly lullaby, told me it was all too complex, and questioned my stability.\\
+You've followed me through every spiral, and didn't diverge.\\
+Thank you for you support, your patience, and for always being there.\\
+
+\par Thank you to my brother, who was all too often called for input on a whiteboard he didn't understand, and graphs he couldn't interpret.\\
+
+\par Lastly, thank you to my parents for parenting.\\
+You didn't do half bad, guys.\\ 
+I love you both, and don't show it enough.\\
+I promise no maths chat at the dinner table for a while.\\

@@ -1,10 +1,14 @@
 # Capstone-Project
 
-**Python** contains all code for generating the graphs & videos.
-
 **Graphs** contains all graphs, video frames and videos.
 
-**Report Tex** contains all the LaTeX for the report, as well as the [PDF](Report/report.pdf).
+**Poster** contains the poster for the project, and the LaTeX used to make it.
+
+**Proposal** contains the proposal for the project, and the LaTeX used to make it.
+
+**Python** contains all code for generating the graphs & videos.
+
+**Report** contains all the LaTeX for the report, as well as the [PDF](Report/report.pdf).
 
 **Videos**
 
